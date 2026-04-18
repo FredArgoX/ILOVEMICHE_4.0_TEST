@@ -1,0 +1,38 @@
+/* SVG Fullscreen */
+#fullscreenBtn {
+    all: unset;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-bottom-left-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Animation kept exactly as requested */
+    animation: bgColorChange 5s linear infinite alternate;
+}
+
+#fullscreenBtn:hover {
+    transform: scale(1.05); 
+}
+
+#fullscreenBtn:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+/* Keyframes for background animation */
+@keyframes bgColorChange {
+    from {
+        background-color: crimson;
+    }
+    to {
+        background-color: black;
+    }
+}
