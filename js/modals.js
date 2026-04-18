@@ -62,6 +62,7 @@ document.addEventListener('keydown', (e) => {
 const trigger = document.getElementById('trigger');
 const modal = document.getElementById('modal');
 const closeBtn = document.getElementById('close-btn');
+const contentX = document.getElementById('s01');
 
 // Save original states
 let originalBodyOverflow = '';
@@ -71,6 +72,7 @@ let wasSwiperEnabled = true;
 trigger.addEventListener('click', () => {
     originalBodyOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';   // Prevent any background scroll
+    contentX.style.opacity = 0.0
 
     // Disable Swiper mousewheel (and touch if you want)
     if (swiper && swiper.mousewheel) {
@@ -86,6 +88,7 @@ trigger.addEventListener('click', () => {
 
 // Close modal
 const closeModal = () => {
+    contentX.style.opacity = 1.0;
     modal.style.display = 'none';
 
     // Restore body scroll
