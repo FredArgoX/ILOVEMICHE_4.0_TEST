@@ -146,8 +146,11 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 15px;
+}
+#s02{
+    justify-content: space-between;
 }
 
 #logos{
@@ -174,7 +177,7 @@ body::before {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    height: calc(100vh - 130px);
+    height: calc(100vh - 160px);
     /*gap: 15px;*/
     /*border: 1px solid crimson;*/
     align-items: center;
@@ -232,10 +235,6 @@ body::before {
         color: hsl(0, 0%, 0%);   /* cyan */
     }
 }
-
-
-
-
 
 
 
