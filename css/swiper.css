@@ -30,6 +30,7 @@
     left: 0rem !important;
     height: 200px;
     border-radius: 6px;
+    backdrop-filter: blur(4px);
 }
 
 /* EVERY bullet (base styles) */

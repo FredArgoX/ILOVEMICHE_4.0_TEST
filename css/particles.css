@@ -1,0 +1,13 @@
+/* /////////////////////////////////////////////////////// */
+/* Particles Background */
+/* ====================== PARTICLES FULL BACKGROUND ====================== */
+#particles-js {
+    position: fixed !important;     /* stays behind everything */
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: -1;                    /* puts it behind all content */
+    pointer-events: none;           /* lets you click buttons normally */
+    overflow: hidden;
+}
