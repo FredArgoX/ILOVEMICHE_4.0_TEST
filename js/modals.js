@@ -1,68 +1,9 @@
-/*
-
-
-// Get elements
-const trigger = document.getElementById('trigger');
-const modal = document.getElementById('modal');
-const closeBtn = document.getElementById('close-btn');
-
-// Save original body overflow so we can restore it later
-let originalOverflow = '';
-
-// Open modal
-trigger.addEventListener('click', () => {
-    originalOverflow = document.body.style.overflow; // remember current state
-    document.body.style.overflow = 'hidden';         // ← prevents background scroll
-    modal.style.display = 'flex';
-});
-
-// Close modal (and restore background scrolling)
-const closeModal = () => {
-    modal.style.display = 'none';
-    document.body.style.overflow = originalOverflow; // restore original scroll behavior
-};
-
-// Close button
-closeBtn.addEventListener('click', closeModal);
-
-// Click outside modal content
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        closeModal();
-    }
-});
-
-// ESC key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.style.display === 'flex') {
-        closeModal();
-    }
-});
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Get elements
 const trigger = document.getElementById('trigger');
 const modal = document.getElementById('modal');
 const closeBtn = document.getElementById('close-btn');
 const contentX = document.getElementById('s01');
+const navBullets = document.getElementById('sw-nav')
 
 // Save original states
 let originalBodyOverflow = '';
@@ -72,7 +13,8 @@ let wasSwiperEnabled = true;
 trigger.addEventListener('click', () => {
     originalBodyOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';   // Prevent any background scroll
-    contentX.style.opacity = 0.0
+    contentX.style.opacity = 0.0;
+    navBullets.style.opacity = 0.0;
 
     // Disable Swiper mousewheel (and touch if you want)
     if (swiper && swiper.mousewheel) {
@@ -89,6 +31,7 @@ trigger.addEventListener('click', () => {
 // Close modal
 const closeModal = () => {
     contentX.style.opacity = 1.0;
+    navBullets.style.opacity = 1.0;
     modal.style.display = 'none';
 
     // Restore body scroll
