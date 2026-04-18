@@ -1,28 +1,120 @@
+/*
+
+
 // Get elements
 const trigger = document.getElementById('trigger');
 const modal = document.getElementById('modal');
 const closeBtn = document.getElementById('close-btn');
 
-// Open modal when clicking the div
+// Save original body overflow so we can restore it later
+let originalOverflow = '';
+
+// Open modal
 trigger.addEventListener('click', () => {
+    originalOverflow = document.body.style.overflow; // remember current state
+    document.body.style.overflow = 'hidden';         // ← prevents background scroll
     modal.style.display = 'flex';
 });
 
-// Close modal when clicking the close button
-closeBtn.addEventListener('click', () => {
+// Close modal (and restore background scrolling)
+const closeModal = () => {
     modal.style.display = 'none';
-});
+    document.body.style.overflow = originalOverflow; // restore original scroll behavior
+};
 
-// Bonus: Close modal when clicking outside the content area
+// Close button
+closeBtn.addEventListener('click', closeModal);
+
+// Click outside modal content
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
-        modal.style.display = 'none';
+        closeModal();
     }
 });
 
-// Keyboard support: press ESC to close
+// ESC key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.style.display === 'flex') {
-        modal.style.display = 'none';
+        closeModal();
+    }
+});
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Get elements
+const trigger = document.getElementById('trigger');
+const modal = document.getElementById('modal');
+const closeBtn = document.getElementById('close-btn');
+
+// Save original states
+let originalBodyOverflow = '';
+let wasSwiperEnabled = true;
+
+// Open modal
+trigger.addEventListener('click', () => {
+    originalBodyOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';   // Prevent any background scroll
+
+    // Disable Swiper mousewheel (and touch if you want)
+    if (swiper && swiper.mousewheel) {
+        wasSwiperEnabled = swiper.mousewheel.enabled;
+        swiper.mousewheel.disable();
+    }
+
+    // Optional: also disable touch swiping on the swiper while modal is open
+    swiper.allowTouchMove = false;
+
+    modal.style.display = 'flex';
+});
+
+// Close modal
+const closeModal = () => {
+    modal.style.display = 'none';
+
+    // Restore body scroll
+    document.body.style.overflow = originalBodyOverflow;
+
+    // Re-enable Swiper mousewheel
+    if (swiper && swiper.mousewheel) {
+        if (wasSwiperEnabled) {
+            swiper.mousewheel.enable();
+        }
+    }
+
+    // If you disabled touch move, re-enable it:
+    swiper.allowTouchMove = true;
+};
+
+// Close button
+closeBtn.addEventListener('click', closeModal);
+
+// Click outside modal content
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+// ESC key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') {
+        closeModal();
     }
 });

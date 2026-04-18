@@ -59,7 +59,7 @@
 
         /* Modal content - a little transparent + vertically scrollable */
         .modal-content {
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.92);
             width: 90%;
             max-width: 600px;
             max-height: 85vh;
@@ -88,30 +88,45 @@
             border-radius: 20px;
         }
 
-        /* Fixed close button at top right */
-        .close-btn {
+        /* ===================================================================
+           NEW CLOSE BUTTON – EXACTLY same style & format as the fullscreen button
+           =================================================================== */
+        #close-btn {
+            all: unset;
+            cursor: pointer;
             position: absolute;
             top: 15px;
             right: 20px;
-            background: none;
-            border: none;
-            font-size: 28px;
-            font-weight: 700;
-            color: #333;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
+            z-index: 10;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-bottom-left-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
-            transition: all 0.2s ease;
-            z-index: 10;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            /* Animation kept exactly as requested */
+            animation: bgColorChange 5s linear infinite alternate;
         }
 
-        .close-btn:hover {
-            background-color: rgba(0, 0, 0, 0.1);
-            color: #e74c3c;
+        #close-btn:hover {
+            transform: scale(1.05); 
+        }
+
+        #close-btn:focus-visible {
+            outline: 3px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Keyframes for background animation (exactly as provided) */
+        @keyframes bgColorChange {
+            from {
+                background-color: #007bff;
+            }
+            to {
+                background-color: chartreuse;
+            }
         }
 
         /* Content inside modal */
@@ -151,8 +166,18 @@
     <div id="modal">
         <div class="modal-content">
             
-            <!-- Fixed close button at top right -->
-            <button class="close-btn" id="close-btn">✕</button>
+            <!-- NEW CLOSE BUTTON – exact same HTML format & SVG style as the fullscreen button -->
+            <button id="close-btn" aria-label="Close modal" title="Close modal">
+                <svg width="30" height="30" aria-hidden="true" focusable="false">
+                    <!-- Close icon (X) – styled exactly like the fullscreen paths -->
+                    <path
+                        stroke="rgb(0, 0, 0)"
+                        stroke-width="3"
+                        fill="none"
+                        d="M 6,6 L 24,24 M 24,6 L 6,24"
+                    />
+                </svg>
+            </button>
             
             <!-- Scrollable content -->
             <div class="modal-body">
