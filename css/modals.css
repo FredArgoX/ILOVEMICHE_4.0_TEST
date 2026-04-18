@@ -24,7 +24,7 @@
     background-color: none;
     /*backdrop-filter: blur(8px);*/
     z-index: 1000;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     animation: fadeIn 0.2s ease;
     border: 2px solid black;
@@ -35,14 +35,16 @@
     /*
     background-image: linear-gradient(120deg, #000000 0%, #000000 30%, #000c1a 90%, #0a0e19 100%);
     */
-    width: 100%;
+    width: calc(100% - 30px);
     max-width: 600px;
-    max-height: 85vh;
+    max-height: calc(100vh - 130px);
     border-radius: 16px;
     /*box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);*/
     position: relative;
     overflow: hidden;
     animation: popIn 0.3s ease;
+    border: 1px solid crimson;
+    top: 65px;
 }
 
 /* Scrollable area */
@@ -62,7 +64,6 @@
     background: #888;
     border-radius: 20px;
 }
-
 /* ===================================================================
     NEW CLOSE BUTTON – EXACTLY same style & format as the fullscreen button
     =================================================================== */
@@ -70,13 +71,13 @@
     all: unset;
     cursor: pointer;
     position: absolute;
-    top: 15px;
-    right: 20px;
-    z-index: 10;
+    top: 40px;
+    right: calc(50% - 25px);
+    z-index: 30000;
     background-color: #007bff;
     color: white;
-    padding: 10px 15px;
-    border-bottom-left-radius: 6px;
+    padding: 10px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,11 +85,11 @@
     /* Animation kept exactly as requested */
     animation: bgColorChange 5s linear infinite alternate;
 }
-
+/*
 #close-btn:hover {
     transform: scale(1.05); 
 }
-
+*/
 #close-btn:focus-visible {
     outline: 3px solid rgba(255, 255, 255, 0.6);
     box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3);

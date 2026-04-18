@@ -114,12 +114,24 @@
             <!--============================================-->
             <!-- The modal -->
             <div id="modal">
+                <!-- NEW CLOSE BUTTON – exact same HTML format & SVG style as the fullscreen button -->
+                <button id="close-btn" aria-label="Close modal" title="Close modal">
+                    <svg width="30" height="30" aria-hidden="true" focusable="false">
+                        <!-- Close icon (X) – styled exactly like the fullscreen paths -->
+                        <path
+                            stroke="rgb(0, 0, 0)"
+                            stroke-width="3"
+                            fill="none"
+                            d="M 6,6 L 24,24 M 24,6 L 6,24"
+                        />
+                    </svg>
+                </button>
                 <div class="modal-content">
                     
                     <!-- NEW CLOSE BUTTON – exact same HTML format & SVG style as the fullscreen button -->
+                    <!--
                     <button id="close-btn" aria-label="Close modal" title="Close modal">
                         <svg width="30" height="30" aria-hidden="true" focusable="false">
-                            <!-- Close icon (X) – styled exactly like the fullscreen paths -->
                             <path
                                 stroke="rgb(0, 0, 0)"
                                 stroke-width="3"
@@ -128,6 +140,7 @@
                             />
                         </svg>
                     </button>
+                    -->
                     
                     <!-- Scrollable content -->
                     <div class="modal-body">
