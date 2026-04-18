@@ -3,191 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World-Class CSS Gradient Animation • Black ↔ Red Intercalation</title>
+    <title>Simple Modal</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
-        /* 
-           WORLD-CLASS SMOOTH COLOR INTERPOLATION
-           Now modified exactly as requested:
-           • 0%  = mostly BLACK tones with subtle RED undertones
-           • 100% = dominant, vibrant RED tones with almost no black
-           The multi-layer radials + linear gradient smoothly INTERCALATE between 
-           deep shadowy blacks and fiery reds. Perfectly interpolated via @property.
-        */
-
-        :root {
-            /* Starting palette (mostly black tones with red hints) */
-            --g1: #220506FF;
-            --g2: #200301FF;
-            --g3: #150504FF;
-            --g4: #160202FF;
-            --g5: #130303FF;
-            --g6: #1B0505FF;
-            --g7: #1B0707FF;
-            --g8: #1B07079C;
-            --g9: #0D0202F5;
-            --g10: #220307F5;
-            --g11: #3A0A0FFF;
-            --g12: #220103FF;
+        /* Reset & basic page styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-
-        /* Register custom properties for native, buttery-smooth color interpolation */
-        @property --g1 { syntax: "<color>"; inherits: true; initial-value: #220506FF; }
-        @property --g2 { syntax: "<color>"; inherits: true; initial-value: #200301FF; }
-        @property --g3 { syntax: "<color>"; inherits: true; initial-value: #150504FF; }
-        @property --g4 { syntax: "<color>"; inherits: true; initial-value: #160202FF; }
-        @property --g5 { syntax: "<color>"; inherits: true; initial-value: #130303FF; }
-        @property --g6 { syntax: "<color>"; inherits: true; initial-value: #1B0505FF; }
-        @property --g7 { syntax: "<color>"; inherits: true; initial-value: #1B0707FF; }
-        @property --g8 { syntax: "<color>"; inherits: true; initial-value: #1B07079C; }
-        @property --g9 { syntax: "<color>"; inherits: true; initial-value: #0D0202F5; }
-        @property --g10 { syntax: "<color>"; inherits: true; initial-value: #220307F5; }
-        @property --g11 { syntax: "<color>"; inherits: true; initial-value: #3A0A0FFF; }
-        @property --g12 { syntax: "<color>"; inherits: true; initial-value: #220103FF; }
-
-        .animated-gradient {
-            background-image: 
-                radial-gradient(18% 28% at 24% 50%, var(--g1) 7%, #073AFF00 100%),
-                radial-gradient(18% 28% at 18% 71%, var(--g2) 6%, #073AFF00 100%),
-                radial-gradient(70% 53% at 36% 76%, var(--g3) 0%, #073AFF00 100%),
-                radial-gradient(42% 53% at 15% 94%, var(--g4) 7%, #073AFF00 100%),
-                radial-gradient(42% 53% at 34% 72%, var(--g5) 7%, #073AFF00 100%),
-                radial-gradient(18% 28% at 35% 87%, var(--g6) 7%, #073AFF00 100%),
-                radial-gradient(31% 43% at 7% 98%, var(--g7) 24%, #073AFF00 100%),
-                radial-gradient(21% 37% at 72% 23%, var(--g8) 24%, #073AFF00 100%),
-                radial-gradient(35% 56% at 91% 74%, var(--g9) 9%, #073AFF00 100%),
-                radial-gradient(74% 86% at 67% 38%, var(--g10) 24%, #073AFF00 100%),
-                linear-gradient(125deg, var(--g11) 1%, var(--g12) 100%);
-
-            /* The magic animation – infinite back-and-forth intercalation */
-            animation: blackToRedIntercalation 10s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
-
-            width: 100%;
-            min-height: 100vh;
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        /* Clickable trigger div */
+        #trigger {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 30px 60px;
+            border-radius: 16px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        #trigger:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Modal overlay (semi-transparent background) */
+        #modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.2s ease;
+        }
+
+        /* Modal content - a little transparent + vertically scrollable */
+        .modal-content {
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 90%;
+            max-width: 600px;
+            max-height: 85vh;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
-            box-shadow: inset 0 0 220px rgba(0, 0, 0, 0.85);
+            animation: popIn 0.3s ease;
         }
 
-        /* Subtle inner glow that pulses with the color shift */
-        .animated-gradient::before {
-            content: '';
+        /* Scrollable area */
+        .modal-body {
+            padding: 70px 30px 30px;
+            max-height: 85vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #888 #f1f1f1;
+        }
+
+        .modal-body::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .modal-body::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 20px;
+        }
+
+        /* Fixed close button at top right */
+        .close-btn {
             position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 50% 30%, rgba(255, 60, 60, 0.18) 0%, transparent 70%);
-            pointer-events: none;
-            animation: subtleRedPulse 5s ease-in-out infinite alternate;
-            z-index: 1;
-        }
-
-        @keyframes blackToRedIntercalation {
-            0% {
-                /* Mostly BLACK tones with subtle RED undertones */
-                --g1: #220506FF;
-                --g2: #200301FF;
-                --g3: #150504FF;
-                --g4: #160202FF;
-                --g5: #130303FF;
-                --g6: #1B0505FF;
-                --g7: #1B0707FF;
-                --g8: #1B07079C;
-                --g9: #0D0202F5;
-                --g10: #220307F5;
-                --g11: #3A0A0FFF;
-                --g12: #220103FF;
-            }
-            100% {
-                /* Dominant, vibrant RED tones with almost no black */
-                --g1: #FF2C3DFF;
-                --g2: #FF1C2AFF;
-                --g3: #E82A2EFF;
-                --g4: #F22A2EFF;
-                --g5: #D82A2EFF;
-                --g6: #FF3A3EFF;
-                --g7: #FF3F3FFF;
-                --g8: #FF3A3A9C;
-                --g9: #C82A2AF5;
-                --g10: #FF2A3CF5;
-                --g11: #FF9A6FFF;
-                --g12: #FF1C2EFF;
-            }
-        }
-
-        @keyframes subtleRedPulse {
-            0% { opacity: 0.4; }
-            100% { opacity: 0.95; }
-        }
-
-        /* Demo content */
-        .content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: white;
-            text-shadow: 0 4px 40px rgba(0, 0, 0, 0.9);
-            font-family: 'Inter', system_ui, sans-serif;
-        }
-
-        .content h1 {
-            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 28px;
             font-weight: 700;
-            letter-spacing: -3px;
-            margin: 0 0 1rem;
-            background: linear-gradient(90deg, #fff, #ff6a6a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .content p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            max-width: 520px;
-            margin: 0 auto;
-            line-height: 1.5;
-        }
-
-        /* Demo controls */
-        .demo-controls {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.75);
-            padding: 12px 28px;
-            border-radius: 9999px;
+            color: #333;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
             display: flex;
-            gap: 18px;
             align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s ease;
             z-index: 10;
-            color: white;
-            font-size: 0.95rem;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(12px);
+        }
+
+        .close-btn:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: #e74c3c;
+        }
+
+        /* Content inside modal */
+        .modal-body h2 {
+            margin-bottom: 20px;
+            color: #222;
+            font-size: 1.8rem;
+        }
+
+        .modal-body p {
+            margin-bottom: 18px;
+            line-height: 1.6;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes popIn {
+            0% { transform: scale(0.95); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
         }
     </style>
 </head>
 <body>
 
-    <div class="animated-gradient">
-        <div class="content">
-            <h1>Black to Red Intercalation</h1>
-            <p>The gradient now animates from <strong>mostly black tones with subtle red hints</strong> to <strong>vibrant, dominant red tones with almost no black</strong>.<br>Perfectly smooth 10-second infinite loop • Native CSS color interpolation • Zero jank.</p>
+    <!-- The clickable div -->
+    <div id="trigger">
+        Click me to open modal
+    </div>
+
+    <!-- The modal -->
+    <div id="modal">
+        <div class="modal-content">
+            
+            <!-- Fixed close button at top right -->
+            <button class="close-btn" id="close-btn">✕</button>
+            
+            <!-- Scrollable content -->
+            <div class="modal-body">
+                <h2>📋 Vertically Scrollable Modal</h2>
+                <p>This is a super simple modal. The entire modal content area is vertically scrollable.</p>
+                <p>Scroll down to see more content. The modal background is slightly transparent (92% opacity white) so you can still see a hint of what's behind it.</p>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+                <p>More content to make it scroll...</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                
+                <p>Keep scrolling... this modal will keep going until you close it! 🎉</p>
+                <p>End of content. Thanks for checking out this simple demo.</p>
+            </div>
         </div>
     </div>
 
-    <!-- Demo controls -->
-    <div class="demo-controls">
-        <span>Animation speed:</span>
-        <button onclick="document.querySelector('.animated-gradient').style.animationDuration = '6s'" style="background:none;border:none;color:white;cursor:pointer;font-size:1.1rem;">⚡ Faster</button>
-        <button onclick="document.querySelector('.animated-gradient').style.animationDuration = '10s'" style="background:none;border:none;color:white;cursor:pointer;font-size:1.1rem;">10s (default)</button>
-        <button onclick="document.querySelector('.animated-gradient').style.animationDuration = '18s'" style="background:none;border:none;color:white;cursor:pointer;font-size:1.1rem;">🐢 Slower</button>
-        <span style="margin-left:16px;opacity:0.6">•</span>
-        <button onclick="const el = document.querySelector('.animated-gradient'); el.style.animationPlayState = el.style.animationPlayState === 'paused' ? 'running' : 'paused'" style="background:none;border:none;color:white;cursor:pointer;font-size:1.1rem;">⏸️ Pause / Play</button>
-    </div>
+    <script>
+        // Get elements
+        const trigger = document.getElementById('trigger');
+        const modal = document.getElementById('modal');
+        const closeBtn = document.getElementById('close-btn');
+
+        // Open modal when clicking the div
+        trigger.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+
+        // Close modal when clicking the close button
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Bonus: Close modal when clicking outside the content area
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Keyboard support: press ESC to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 </html>

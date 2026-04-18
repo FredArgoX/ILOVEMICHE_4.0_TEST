@@ -31,6 +31,7 @@
     <!--External Styling-->
     <link rel="stylesheet" href="./css/basics.css">
     <link rel="stylesheet" href="./css/fullscreen.css">
+    <link rel="stylesheet" href="./css/modals.css">
     <link rel="stylesheet" href="./css/swiper.css">
     <link rel="stylesheet" href="./css/particles.css">
     <!-- Link Swiper's CSS -->
@@ -40,7 +41,6 @@
     <!-- /////////////////////////////////////////////////////// -->
     <!--Particles JS Content-->
     <div id="particles-js"></div>
-    <!-- /////////////////////////////////////////////////////// -->
     <!-- /////////////////////////////////////////////////////// -->
     <!-- Fullscreen -->
     <button id="fullscreenBtn" aria-label="Enter fullscreen" title="Toggle fullscreen">
@@ -68,13 +68,14 @@
     <div class="swiper mySwiper">
         <!------------------------------------------------>
         <div class="swiper-wrapper">
+            <!--============================================-->
             <div class="swiper-slide" id="s01">
                 <div id="logos">
                     <img src="./assets/ilovemiche_logo.jpg" alt="ILOVE MICHE" class="logox" id="logo1">
                     <img src="./assets/kids_logo.jpg" alt="ILOVE MICHE Kids" class="logox" id="logo2">
                 </div>
                 <div id="btnxs">
-                    <div class="btnx"><p class="tx">Chamoyadas</p></div>
+                    <div class="btnx" id="trigger"><p class="tx">Chamoyadas</p></div>
                     <div class="btnx"><p class="tx">Cerveza</p></div>
                     <div class="btnx"><p class="tx">Mojitos</p></div>
                     <div class="btnx"><p class="tx">Piña Colada Frappe</p></div>
@@ -110,10 +111,44 @@
                     <div class="btnx"><p class="tx">Gonzalitas</p></div>
                 </div>
             </div>
+            <!--============================================-->
+            <!-- The modal -->
+            <div id="modal">
+                <div class="modal-content">
+                    
+                    <!-- Fixed close button at top right -->
+                    <button class="close-btn" id="close-btn">✕</button>
+                    
+                    <!-- Scrollable content -->
+                    <div class="modal-body">
+                        <h2>📋 Chamoyadas</h2>
+                        <p>This is a super simple modal. The entire modal content area is vertically scrollable.</p>
+                        <p>Scroll down to see more content. The modal background is slightly transparent (92% opacity white) so you can still see a hint of what's behind it.</p>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        
+                        <p>More content to make it scroll...</p>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                        <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                        
+                        <p>Keep scrolling... this modal will keep going until you close it! 🎉</p>
+                        <p>End of content. Thanks for checking out this simple demo.</p>
+                    </div>
+                </div>
+            </div>
+            <!--============================================-->
+            <!--
             <div class="swiper-slide" id="s02">
                 <h1>Para el hombre sin reservas</h1>
                 <p>Para el hombre sin reservas</p>
             </div>
+            -->
+            <!--============================================-->
         </div>
         <!------------------------------------------------>
         <div class="swiper-pagination">
@@ -143,8 +178,11 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="./js/particles.js"></script>
     <!-- /////////////////////////////////////////////////////// -->
-    <!-- External functionality -->
+    <!-- Fullscreen -->
     <script src="./js/fullscreen.js"></script>
+    <!-- /////////////////////////////////////////////////////// -->
+    <!-- Modals -->
+    <script src="./js/modals.js"></script>
     <!-- /////////////////////////////////////////////////////// -->
 </body>
 </html>

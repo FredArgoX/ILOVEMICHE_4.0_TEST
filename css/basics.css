@@ -24,6 +24,8 @@ body {
     background-image: linear-gradient(90deg, #000000 0%, #000000 30%, #000c1a 90%, #0a0e19 100%);
 }
 
+/* /////////////////////////////////////////////////////// */
+
 #s01, #s02{
     padding: 15px;
     display: flex;
@@ -32,9 +34,8 @@ body {
     justify-content: flex-start;
     gap: 15px;
 }
-#s02{
-    justify-content: space-between;
-}
+
+/* /////////////////////////////////////////////////////// */
 
 #logos{
     width: 100%;
@@ -59,48 +60,19 @@ body {
 #logo2{
     box-shadow: 0px 0px 20px #000c1a;
 }
-/*
-*{
-    border: 1px solid chartreuse;
-}
-*/
+
+/* /////////////////////////////////////////////////////// */
+
 #btnxs{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     height: calc(100vh - 175px);
-    /*gap: 15px;*/
-    /*border: 1px solid crimson;*/
     align-items: center;
     justify-content: space-around;
     backdrop-filter: blur(4px);
-
     border-radius: 15px;
-}
-
-.btnx{
-    /*width: calc(50% - (1.5 * 15px));*/
-    width: 150px;
-    border-radius: 10px;
-    /*background: rgba(255, 255, 255, 0.03);*/
-    /*backdrop-filter: blur(4px);           */
-    /*-webkit-backdrop-filter: blur(4px);   */
-    /*color: rgb(0, 0, 0);*/
-    /*border-block-end: 2px solid wheat;*/
-    /*border-inline-end: 3px solid wheat;*/
-    border-radius: 0px;
-    /*text-shadow: 0px 0px 5px hsl(0, 0%, 0%);*/
-    font-size: 0.75rem;
-/*    backdrop-filter: blur(4px);*/
-    color: white;
-    /*border: 1px solid black;*/
-    padding-block-start: 3px;
-    padding-block-end: 3px;
-
-    border-top-left-radius: 20% 100%;
-    border-bottom-right-radius: 20% 100%;
-    background-color: none;
 }
 
 .btnx:nth-child(1),
@@ -125,66 +97,30 @@ body {
     border-top-right-radius: 20% 100%;
     border-bottom-left-radius: 20% 100%;
     background-color: black;
-    /*color: white;*/
-    /*border: none;*/
-    /*border-block-end: 2px solid black;*/
-    /*border-inline-start: 3px solid black;*/
-    /*border-radius: 0px;*/
-    /*text-shadow: 0px 0px 5px black;*/
-
-
-    /*animation: colorChange 20s ease-in-out infinite alternate;*/
-    /*animation: colorChange2 5s ease-in-out infinite alternate;*/
 
 }
 
-/*
-@keyframes colorChange {
-    0% {
-        color: hsl(0, 0%, 0%);   
-    }
-    100% {
-        color: hsl(39, 77%, 83%);   
-    }
+.btnx{
+    width: 150px;
+    border-radius: 10px;
+    border-radius: 0px;
+    font-size: 0.75rem;
+    color: white;
+    padding-block-start: 3px;
+    padding-block-end: 3px;
+    border-top-left-radius: 20% 100%;
+    border-bottom-right-radius: 20% 100%;
+    background-color: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-@keyframes colorChange2 {
-    0% {
-        border-inline-start: 3px solid black;
-    }
-    100% {
-        border-inline-start: 3px solid crimson;
-    }
+.btnx:hover{
+    transform: scale(1.2);
+    background-color: #920000;
+    color: white;
 }
 
 
 
-*/
-
-
-
-
-
-
-
-/*
-.btnx:nth-child(3),
-.btnx:nth-child(4),
-.btnx:nth-child(7),
-.btnx:nth-child(8),
-.btnx:nth-child(11),
-.btnx:nth-child(12),
-.btnx:nth-child(15),
-.btnx:nth-child(16),
-.btnx:nth-child(19),
-.btnx:nth-child(20),
-.btnx:nth-child(23),
-.btnx:nth-child(24),
-.btnx:nth-child(27),
-.btnx:nth-child(28),
-.btnx:nth-child(31),
-.btnx:nth-child(32)
-{
-    background-color: #000;
-}
-    */
+/* /////////////////////////////////////////////////////// */
