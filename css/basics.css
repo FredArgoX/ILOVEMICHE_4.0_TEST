@@ -44,6 +44,7 @@ body {
     align-items: center;
     justify-content: space-around;
     backdrop-filter: blur(4px);
+    border-radius: 15px;
 }
 
 .logox{
@@ -74,10 +75,13 @@ body {
     align-items: center;
     justify-content: space-around;
     backdrop-filter: blur(4px);
+
+    border-radius: 15px;
 }
 
 .btnx{
-    width: calc(50% - (1.5 * 15px));
+    /*width: calc(50% - (1.5 * 15px));*/
+    width: 150px;
     border-radius: 10px;
     /*background: rgba(255, 255, 255, 0.03);*/
     /*backdrop-filter: blur(4px);           */
@@ -90,6 +94,13 @@ body {
     font-size: 0.75rem;
 /*    backdrop-filter: blur(4px);*/
     color: white;
+    /*border: 1px solid black;*/
+    padding-block-start: 3px;
+    padding-block-end: 3px;
+
+    border-top-left-radius: 20% 100%;
+    border-bottom-right-radius: 20% 100%;
+    background-color: none;
 }
 
 .btnx:nth-child(1),
@@ -110,8 +121,12 @@ body {
 .btnx:nth-child(32),
 .btnx:nth-child(33)
 {
+    border-radius: 0px;
+    border-top-right-radius: 20% 100%;
+    border-bottom-left-radius: 20% 100%;
+    background-color: black;
     /*color: white;*/
-    border: none;
+    /*border: none;*/
     /*border-block-end: 2px solid black;*/
     /*border-inline-start: 3px solid black;*/
     /*border-radius: 0px;*/
@@ -120,7 +135,9 @@ body {
 
     /*animation: colorChange 20s ease-in-out infinite alternate;*/
     /*animation: colorChange2 5s ease-in-out infinite alternate;*/
+
 }
+
 /*
 @keyframes colorChange {
     0% {
