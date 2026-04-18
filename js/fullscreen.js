@@ -43,11 +43,11 @@
         if (isFullscreen) {
         // Show exit icon
         enterPath.setAttribute('stroke', 'transparent');
-        exitPath.setAttribute('stroke', 'rgb(231, 223, 212)');
+        exitPath.setAttribute('stroke', 'rgb(0, 0, 0)');
         fullscreenBtn.setAttribute('aria-label', 'Exit fullscreen');
         } else {
         // Show enter icon
-        enterPath.setAttribute('stroke', 'rgb(231, 223, 212)');
+        enterPath.setAttribute('stroke', 'rgb(0, 0, 0)');
         exitPath.setAttribute('stroke', 'transparent');
         fullscreenBtn.setAttribute('aria-label', 'Enter fullscreen');
         }

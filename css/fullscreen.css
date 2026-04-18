@@ -30,9 +30,9 @@
 /* Keyframes for background animation */
 @keyframes bgColorChange {
     from {
-        background-color: crimson;
+        background-color: #007bff;
     }
     to {
-        background-color: black;
+        background-color: chartreuse;
     }
 }
