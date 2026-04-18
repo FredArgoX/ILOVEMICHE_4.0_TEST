@@ -14,18 +14,18 @@
     --g11: #3A0A0FFF;
     --g12: #220103FF;
     */
-    --g1: rgb(255, 255, 255);
+    --g1: rgb(0, 0, 0);
     --g2: rgb(255, 255, 255);
-    --g3: rgb(255, 255, 255);
-    --g4: rgb(255, 255, 255);
-    --g5: rgb(255, 255, 255);
-    --g6: rgb(255, 255, 255);
-    --g7: rgb(255, 255, 255);
-    --g8: rgb(255, 255, 255);
-    --g9: rgb(255, 255, 255);
-    --g10:rgb(255, 255, 255);
-    --g11:rgb(255, 255, 255);
-    --g12:rgb(255, 255, 255);
+    --g3: rgb(152, 168, 1);
+    --g4: rgb(59, 44, 145);
+    --g5: rgb(63, 5, 90);
+    --g6: rgb(190, 187, 0);
+    --g7: rgb(39, 158, 173);
+    --g8: rgb(184, 5, 5);
+    --g9: rgb(71, 8, 153);
+    --g10:rgb(235, 12, 68);
+    --g11:rgb(22, 216, 55);
+    --g12:rgb(126, 126, 126);
 }
 
 /* Register custom properties for native, buttery-smooth color interpolation */
@@ -43,18 +43,18 @@
 @property --g11 { syntax: "<color>"; inherits: true; initial-value: #3A0A0FFF; }
 @property --g12 { syntax: "<color>"; inherits: true; initial-value: #220103FF; }
 */
-@property --g1 { syntax: "<color>"; inherits: true; initial-value: rgb(255, 255, 255); }
+@property --g1 { syntax: "<color>"; inherits: true; initial-value: rgb(0, 0, 0); }
 @property --g2 { syntax: "<color>"; inherits: true; initial-value: rgb(255, 255, 255); }
-@property --g3 { syntax: "<color>"; inherits: true; initial-value: rgb(255, 255, 255); }
-@property --g4 { syntax: "<color>"; inherits: true; initial-value: rgb(255, 255, 255); }
-@property --g5 { syntax: "<color>"; inherits: true; initial-value: rgb(255, 255, 255); }
-@property --g6 { syntax: "<color>"; inherits: true; initial-value: rgb(255, 255, 255); }
-@property --g7 { syntax: "<color>"; inherits: true; initial-value: rgb(255, 255, 255); }
-@property --g8 { syntax: "<color>"; inherits: true; initial-value: rgb(255, 255, 255); }
-@property --g9 { syntax: "<color>"; inherits: true; initial-value: rgb(255, 255, 255); }
-@property --g10 { syntax: "<color>"; inherits: true; initial-value: rgb(255, 255, 255); }
-@property --g11 { syntax: "<color>"; inherits: true; initial-value: rgb(255, 255, 255); }
-@property --g12 { syntax: "<color>"; inherits: true; initial-value: rgb(255, 255, 255); }
+@property --g3 { syntax: "<color>"; inherits: true; initial-value: rgb(152, 168, 1); }
+@property --g4 { syntax: "<color>"; inherits: true; initial-value: rgb(59, 44, 145); }
+@property --g5 { syntax: "<color>"; inherits: true; initial-value: rgb(63, 5, 90); }
+@property --g6 { syntax: "<color>"; inherits: true; initial-value: rgb(190, 187, 0); }
+@property --g7 { syntax: "<color>"; inherits: true; initial-value: rgb(39, 158, 173); }
+@property --g8 { syntax: "<color>"; inherits: true; initial-value: rgb(184, 5, 5); }
+@property --g9 { syntax: "<color>"; inherits: true; initial-value: rgb(71, 8, 153); }
+@property --g10 { syntax: "<color>"; inherits: true; initial-value: rgb(235, 12, 68); }
+@property --g11 { syntax: "<color>"; inherits: true; initial-value: rgb(22, 216, 55); }
+@property --g12 { syntax: "<color>"; inherits: true; initial-value: rgb(126, 126, 126); }
 
 
 
@@ -121,48 +121,60 @@ body::before {
 
 @keyframes blackToRedIntercalation {
     0% {
-        /* Mostly BLACK tones with subtle RED undertones */
-        /*
-        --g1: #220506FF;
-        --g2: #200301FF;
-        --g3: #150504FF;
-        --g4: #160202FF;
-        --g5: #130303FF;
-        --g6: #1B0505FF;
-        --g7: #1B0707FF;
-        --g8: #1B07079C;
-        --g9: #0D0202F5;
-        --g10: #220307F5;
-        --g11: #3A0A0FFF;
-        --g12: #220103FF;
-        */
         --g1: rgb(255, 255, 255);
         --g2: rgb(255, 255, 255);
         --g3: rgb(255, 255, 255);
-        --g4: rgb(255, 255, 255);
+        --g4: rgb(175, 0, 0);
         --g5: rgb(255, 255, 255);
         --g6: rgb(255, 255, 255);
         --g7: rgb(255, 255, 255);
         --g8: rgb(255, 255, 255);
-        --g9: rgb(255, 255, 255);
+        --g9: rgb(185, 0, 0);
         --g10:rgb(255, 255, 255);
-        --g11:rgb(255, 255, 255);
+        --g11:rgb(119, 0, 0);
         --g12:rgb(255, 255, 255);
     }
+    25% {
+        --g1: rgba(175, 0, 0, 0.5);
+        --g2: rgba(255, 255, 255, 0.5);
+        --g3: rgba(119, 0, 0, 0.5);
+        --g4: rgb(255, 255, 255); /*---------*/
+        --g5: rgba(255, 255, 255, 0.5);
+        --g6: rgba(185, 0, 0, 0.5);
+        --g7: rgba(255, 255, 255, 0.5);
+        --g8: rgba(175, 0, 0, 0.5);
+        --g9: rgb(255, 255, 255); /*---------*/
+        --g10:rgba(175, 0, 0, 0.5);
+        --g11:rgb(255, 255, 255); /*---------*/
+        --g12:rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        --g1: rgba(175, 0, 0, 0.5);
+        --g2: rgba(255, 0, 0, 0.5);
+        --g3: rgba(119, 0, 0, 0.5);
+        --g4: rgb(255, 0, 0); /*---------*/
+        --g5: rgba(160, 0, 0, 0.5);
+        --g6: rgba(185, 0, 0, 0.5);
+        --g7: rgba(255, 255, 255, 0.5);
+        --g8: rgba(255, 255, 255, 0.5);
+        --g9: rgb(255, 255, 255); /*---------*/
+        --g10:rgba(175, 0, 0, 0.5);
+        --g11:rgb(255, 255, 255); /*---------*/
+        --g12:rgba(255, 0, 0, 0.5);
+    }
     100% {
-        /* Dominant, vibrant RED tones with almost no black */
-        --g1: #FF2C3DFF;
-        --g2: #FF1C2AFF;
-        --g3: #E82A2EFF;
-        --g4: #F22A2EFF;
-        --g5: #D82A2EFF;
-        --g6: #FF3A3EFF;
-        --g7: #FF3F3FFF;
-        --g8: #FF3A3A9C;
-        --g9: #C82A2AF5;
-        --g10: #FF2A3CF5;
-        --g11: #FF9A6FFF;
-        --g12: #FF1C2EFF;
+        --g1: rgba(175, 0, 0, 0.5);
+        --g2: rgba(185, 0, 0, 0.5);
+        --g3: rgba(119, 0, 0, 0.5);
+        --g4: rgb(255, 255, 255); /*---------*/
+        --g5: rgba(175, 0, 0, 0.5);
+        --g6: rgba(185, 0, 0, 0.5);
+        --g7: rgba(119, 0, 0, 0.5);
+        --g8: rgba(175, 0, 0, 0.5);
+        --g9: rgb(255, 255, 255); /*---------*/
+        --g10:rgba(175, 0, 0, 0.5);
+        --g11:rgb(255, 255, 255); /*---------*/
+        --g12:rgba(175, 0, 0, 0.5);
     }
 }
 
