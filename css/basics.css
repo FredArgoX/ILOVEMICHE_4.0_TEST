@@ -68,7 +68,7 @@ body {
         linear-gradient(125deg, var(--g11) 1%, var(--g12) 100%);
 
     /* The magic animation – infinite back-and-forth intercalation */
-    animation: blackToRedIntercalation 10s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+    animation: blackToRedIntercalation 20s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
 
     width: 100%;
     min-height: 100vh;
@@ -177,7 +177,7 @@ body::before {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 175px);
     /*gap: 15px;*/
     /*border: 1px solid crimson;*/
     align-items: center;
@@ -224,7 +224,7 @@ body::before {
     text-shadow: 0px 0px 5px black;
 
 
-    animation: colorChange 10s ease-in-out infinite alternate;
+    animation: colorChange 20s ease-in-out infinite alternate;
 }
 
 @keyframes colorChange {
