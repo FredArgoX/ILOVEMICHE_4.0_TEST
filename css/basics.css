@@ -21,6 +21,7 @@ body {
     justify-content: center;
     position: relative;
     background-color: black;
+    background-image: linear-gradient(90deg, #000000 0%, #000000 30%, #000c1a 90%, #0a0e19 100%);
 }
 
 #s01, #s02{
@@ -42,12 +43,20 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    backdrop-filter: blur(4px);
 }
 
 .logox{
    max-height: 80px;
    max-width: 80px;
-   box-shadow: 0px 0px 50px black;
+   /*box-shadow: 0px 0px 50px black;*/
+}
+
+#logo1{
+    box-shadow: 0px 0px 20px black
+}
+#logo2{
+    box-shadow: 0px 0px 20px #000c1a;
 }
 /*
 *{
@@ -64,6 +73,7 @@ body {
     /*border: 1px solid crimson;*/
     align-items: center;
     justify-content: space-around;
+    backdrop-filter: blur(4px);
 }
 
 .btnx{
@@ -78,8 +88,8 @@ body {
     border-radius: 0px;
     /*text-shadow: 0px 0px 5px hsl(0, 0%, 0%);*/
     font-size: 0.75rem;
-    backdrop-filter: blur(4px);
-    color: wheat;
+/*    backdrop-filter: blur(4px);*/
+    color: white;
 }
 
 .btnx:nth-child(1),
@@ -100,7 +110,7 @@ body {
 .btnx:nth-child(32),
 .btnx:nth-child(33)
 {
-    color: wheat;
+    /*color: white;*/
     border: none;
     /*border-block-end: 2px solid black;*/
     /*border-inline-start: 3px solid black;*/

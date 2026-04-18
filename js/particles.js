@@ -1,20 +1,20 @@
 particlesJS("particles-js", {
 "particles": {
     "number": {
-    "value": 100,
+    "value": 80,
     "density": {
         "enable": true,
         "value_area": 800
     }
     },
     "color": {
-    "value": "#1D4ED8"
+    "value": "#000000"
     },
     "shape": {
     "type": "circle",
     "stroke": {
         "width": 0,
-        "color": "#7200a7"
+        "color": "#000000"
     }
     },
     "opacity": {

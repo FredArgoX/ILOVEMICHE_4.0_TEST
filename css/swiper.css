@@ -48,9 +48,9 @@
 
 /* ACTIVE bullet (current slide) */
 .swiper-pagination-bullet-active {
-    background: crimson !important;
+    background: #920000 !important;
     transform: scale(1.3);
-    color: crimson !important;
+    color: #920000 !important;
 }
 
 /* Inactive bullets */
