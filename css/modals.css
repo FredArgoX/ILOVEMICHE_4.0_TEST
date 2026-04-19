@@ -1,16 +1,8 @@
+/*
 #trigger{
     border: 1px solid chartreuse;
 }
-
-
-
-
-
-
-
-
-
-
+*/
 
 /* Modal overlay (semi-transparent background) */
 #modal {
@@ -63,7 +55,7 @@
     max-height: 85vh;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: #888 #f1f1f1;
+    scrollbar-color: #3d3d3d rgba(0, 0, 0, 0);
     backdrop-filter: blur(4px);
 }
 

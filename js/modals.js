@@ -3,7 +3,8 @@ const trigger = document.getElementById('trigger');
 const modal = document.getElementById('modal');
 const closeBtn = document.getElementById('close-btn');
 const contentX = document.getElementById('s01');
-const navBullets = document.getElementById('sw-nav')
+const navBullets = document.getElementById('sw-nav');
+const modalArea = document.getElementById('modal-area');
 
 // Save original states
 let originalBodyOverflow = '';
@@ -25,13 +26,16 @@ trigger.addEventListener('click', () => {
     // Optional: also disable touch swiping on the swiper while modal is open
     swiper.allowTouchMove = false;
 
+    modalArea.scrollTop = 0;
     modal.style.display = 'flex';
+    
 });
 
 // Close modal
 const closeModal = () => {
     contentX.style.opacity = 1.0;
     navBullets.style.opacity = 1.0;
+    modalArea.scrollTop = 0;
     modal.style.display = 'none';
 
     // Restore body scroll

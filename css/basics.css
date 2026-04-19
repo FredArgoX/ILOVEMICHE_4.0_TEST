@@ -68,13 +68,14 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    height: calc(100vh - 175px);
-    align-items: center;
-    justify-content: space-around;
+    /*height: calc(100vh - 175px);*/
+    height: fit-content;
+    align-items: flex-start;
+    justify-content: flex-start;
     backdrop-filter: blur(4px);
     border-radius: 15px;
 }
-
+/*
 .btnx:nth-child(1),
 .btnx:nth-child(4),
 .btnx:nth-child(5),
@@ -96,23 +97,34 @@ body {
     border-radius: 0px;
     border-top-right-radius: 20% 100%;
     border-bottom-left-radius: 20% 100%;
-    /*background-color: black;*/
 
 }
-
+*/
 .btnx{
+    /*
     width: 150px;
+    */
+    width: 50%;
+    /*
     border-radius: 10px;
     border-radius: 0px;
+    */
+    
     font-size: 0.75rem;
     color: white;
-    padding-block-start: 3px;
-    padding-block-end: 3px;
+    padding-block-start: 4px;
+    padding-block-end: 4px;
+    /*
     border-top-left-radius: 20% 100%;
     border-bottom-right-radius: 20% 100%;
+    */
+    
+    border-radius: 0px;
+
     background-color: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    /*border: 1px solid chartreuse;*/
 }
 
 .btnx:hover{
@@ -123,4 +135,33 @@ body {
 
 
 
+
+
+
+.btnx:nth-child(1){
+    border-block-start: 2px solid #007bff;
+}
+
+.btnx:nth-child(2){
+    border-block-start: 2px solid #007bff;
+}
+
+.btnx:nth-child(28){
+    background-color: #007bff;
+    border-block-end: 2px solid #007bff;
+    color: black;
+    font-weight: 600;
+}
+
+.btnx:nth-child(27){
+    border-block-end: 2px solid #007bff;
+    /*border-inline-end: 2px solid #007bff;*/
+}
+*/
 /* /////////////////////////////////////////////////////// */
+
+/*
+*{
+    border: 1px solid chartreuse;
+}
+    */
