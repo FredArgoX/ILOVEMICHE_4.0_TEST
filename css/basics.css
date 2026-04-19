@@ -68,8 +68,8 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    /*height: calc(100vh - 175px);*/
-    height: fit-content;
+    height: calc(100vh - 175px);
+    /*height: fit-content;*/
     align-items: flex-start;
     justify-content: flex-start;
     backdrop-filter: blur(4px);
@@ -157,11 +157,6 @@ body {
     border-block-end: 2px solid #007bff;
     /*border-inline-end: 2px solid #007bff;*/
 }
-*/
+
 /* /////////////////////////////////////////////////////// */
 
-/*
-*{
-    border: 1px solid chartreuse;
-}
-    */
