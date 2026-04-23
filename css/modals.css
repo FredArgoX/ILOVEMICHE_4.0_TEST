@@ -4,6 +4,8 @@
 }
 */
 
+
+
 /* Modal overlay (semi-transparent background) */
 #modal {
     display: none;
@@ -45,7 +47,7 @@
         border: 2px solid #007bff;
     }
     to{
-        border: 2px solid chartreuse;
+        border: 2px solid #444444;
     }
 }
 
@@ -56,7 +58,7 @@
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #3d3d3d rgba(0, 0, 0, 0);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
 }
 
 .modal-body::-webkit-scrollbar {
@@ -104,7 +106,7 @@
         background-color: #007bff;
     }
     to {
-        background-color: chartreuse;
+        background-color: #444444;
     }
 }
 
