@@ -37,18 +37,9 @@
     position: relative;
     overflow: hidden;
     animation: popIn 0.3s ease;
-    border: 2px solid #007bff;
+    border: 2px solid #444444;
     top: 65px;
-
-    animation: borderChange 5s linear infinite alternate;
-}
-@keyframes borderChange{
-    from{
-        border: 2px solid #007bff;
-    }
-    to{
-        border: 2px solid #ffffff;
-    }
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 0%, rgba(145, 0, 0, 0.1) 100%);
 }
 
 /* Scrollable area */
@@ -59,6 +50,7 @@
     scrollbar-width: thin;
     scrollbar-color: #3d3d3d rgba(0, 0, 0, 0);
     backdrop-filter: blur(2px);
+    
 }
 
 .modal-body::-webkit-scrollbar {
@@ -79,16 +71,16 @@
     top: 40px;
     right: calc(50% - 25px);
     z-index: 30000;
-    background-color: #007bff;
+    background-color: rgba(145, 0, 0, 0.1);
     color: white;
     padding: 10px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    /* Animation kept exactly as requested */
-    animation: bgColorChange 5s linear infinite alternate;
+    
+    animation: bgColorChange 3.5s linear infinite;
+    backdrop-filter: blur(2px);
 }
 /*
 #close-btn:hover {
@@ -102,11 +94,29 @@
 
 /* Keyframes for background animation (exactly as provided) */
 @keyframes bgColorChange {
-    from {
-        background-color: #910000;
+    0% {
+        background-color: rgba(0, 0, 0, 0.0);
+        border: 2px solid #444444;
     }
-    to {
-        background-color: #ffffff;
+    1% {
+        background-color: rgba(145, 0, 0, 0.5);
+        border: 2px solid #910000;
+    }
+    30% {
+        background-color: rgba(0, 0, 0, 0.0);
+        border: 2px solid #444444;
+    }
+    50% {
+        background-color: rgba(145, 0, 0, 0.5);
+        border: 2px solid #910000;
+    }
+    70% {
+        background-color: rgba(0, 0, 0, 0.0);
+        border: 2px solid #444444;
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.0);
+        border: 2px solid #444444;
     }
 }
 
