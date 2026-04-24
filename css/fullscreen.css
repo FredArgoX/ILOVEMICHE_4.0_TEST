@@ -20,7 +20,7 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     /* Animation kept exactly as requested */
     animation: bgColorChangeX 1s linear infinite alternate;
-    animation: popSize 1.5s linear infinite alternate;
+    animation: popSize 3.5s linear infinite;
 }
 
 #fullscreenBtn:hover {
