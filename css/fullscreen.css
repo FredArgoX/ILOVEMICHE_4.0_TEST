@@ -15,7 +15,8 @@
     justify-content: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     /* Animation kept exactly as requested */
-    animation: bgColorChange 5s linear infinite alternate;
+    animation: bgColorChangeX 1s linear infinite alternate;
+    animation: popSize 1.5s linear infinite alternate;
 }
 
 #fullscreenBtn:hover {
@@ -28,11 +29,32 @@
 }
 
 /* Keyframes for background animation */
-@keyframes bgColorChange {
+@keyframes bgColorChangeX {
     from {
         background-color: #007bff;
     }
     to {
-        background-color: rgb(255, 255, 255);
+        background-color: #910000;
+    }
+}
+
+@keyframes popSize {
+    0% {
+        padding: 10px;
+    }
+    1% {
+        padding: 15px;
+    }
+    8% {
+        padding: 10px;
+    }
+    15% {
+        padding: 15px;
+    }
+    22% {
+        padding: 10px;
+    }
+    100% {
+        padding: 10px;
     }
 }

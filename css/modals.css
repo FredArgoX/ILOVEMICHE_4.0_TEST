@@ -103,7 +103,7 @@
 /* Keyframes for background animation (exactly as provided) */
 @keyframes bgColorChange {
     from {
-        background-color: #007bff;
+        background-color: #910000;
     }
     to {
         background-color: #ffffff;
