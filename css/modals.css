@@ -157,7 +157,7 @@
 
 
 
-.topBorder{
+.leftBorder{
     position: fixed;
     width: 25px;
     height: calc(100vh - 130px);
@@ -169,13 +169,13 @@
     border-inline-start: 2px solid #444444;
     border-block-start: 2px solid #444444;
     border-block-end: 2px solid #444444;
-    border-inline-end: 2px solid rgba(0, 0, 0, 0);
+    border-inline-end: none;
 
     z-index: 10;
 }
 
 
-.bottomBorder{
+.rightBorder{
     position: fixed;
     width: 25px;
     height: calc(100vh - 130px);
@@ -187,6 +187,6 @@
     border-inline-end: 2px solid #444444;
     border-block-start: 2px solid #444444;
     border-block-end: 2px solid #444444;
-    border-inline-start: 2px solid rgba(0, 0, 0, 0);
+    border-inline-start: none;
     z-index: 10;
 }
