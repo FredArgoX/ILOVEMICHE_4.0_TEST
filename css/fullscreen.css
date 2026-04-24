@@ -7,19 +7,16 @@
     right: 0;
     z-index: 9999;
     /*background-color: #007bff;*/
-    background: rgba(145, 0, 0, 0.1);
-    border: 2px solid #910000;
+    background-color: rgba(145, 0, 0, 0.1);
+    border-inline-start: 2px solid #910000;
+    border-block-end: 2px solid #910000;
     border-block-start: none;
     border-inline-end: none;
-    color: white;
     padding: 10px;
     border-bottom-left-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    /* Animation kept exactly as requested */
-    animation: bgColorChangeX 1s linear infinite alternate;
     animation: popSize 3.5s linear infinite;
 }
 
@@ -27,38 +24,42 @@
     transform: scale(1.05); 
 }
 
-#fullscreenBtn:focus-visible {
-    outline: 3px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3);
-}
-
-/* Keyframes for background animation */
-@keyframes bgColorChangeX {
-    from {
-        background-color: #ffffff;
-    }
-    to {
-        background-color: #910000;
-    }
-}
 
 @keyframes popSize {
     0% {
         padding: 10px;
+        background-color: rgba(145, 0, 0, 0.1);
+        border-inline-start: 2px solid #910000;
+        border-block-end: 2px solid #910000;
     }
     1% {
         padding: 15px;
+        background-color: rgba(145, 0, 0, 0.5);
+        border-inline-start: 2px solid #444444;
+        border-block-end: 2px solid #444444;
     }
     8% {
         padding: 10px;
+        background-color: rgba(145, 0, 0, 0.1);
+        border-inline-start: 2px solid #910000;
+        border-block-end: 2px solid #910000;
     }
     15% {
         padding: 15px;
+        background-color: rgba(145, 0, 0, 0.5);
+        border-inline-start: 2px solid #444444;
+        border-block-end: 2px solid #444444;
     }
     22% {
         padding: 10px;
+        background-color: rgba(145, 0, 0, 0.1);
+        border-inline-start: 2px solid #910000;
+        border-block-end: 2px solid #910000;
     }
     100% {
         padding: 10px;
+        background-color: rgba(145, 0, 0, 0.1);
+        border-inline-start: 2px solid #910000;
+        border-block-end: 2px solid #910000;
     }
 }
