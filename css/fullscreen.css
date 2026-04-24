@@ -6,7 +6,11 @@
     top: 0;
     right: 0;
     z-index: 9999;
-    background-color: #007bff;
+    /*background-color: #007bff;*/
+    background: rgba(145, 0, 0, 0.1);
+    border: 2px solid #910000;
+    border-block-start: none;
+    border-inline-end: none;
     color: white;
     padding: 10px;
     border-bottom-left-radius: 6px;
@@ -31,7 +35,7 @@
 /* Keyframes for background animation */
 @keyframes bgColorChangeX {
     from {
-        background-color: #007bff;
+        background-color: #ffffff;
     }
     to {
         background-color: #910000;
