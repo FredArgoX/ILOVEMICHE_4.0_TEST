@@ -82,7 +82,7 @@
     align-items: center;
     justify-content: center;
     
-    animation: bgColorChange 3.5s linear infinite;
+    animation: bgColorChange 15s linear infinite;
     backdrop-filter: blur(2px);
 }
 /*
@@ -101,21 +101,17 @@
         background-color: rgba(0, 0, 0, 0.0);
         border: 2px solid #444444;
     }
-    1% {
+    25% {
         background-color: rgba(145, 0, 0, 0.5);
         border: 2px solid #910000;
-    }
-    30% {
-        background-color: rgba(0, 0, 0, 0.0);
-        border: 2px solid #444444;
     }
     50% {
-        background-color: rgba(145, 0, 0, 0.5);
-        border: 2px solid #910000;
-    }
-    70% {
         background-color: rgba(0, 0, 0, 0.0);
         border: 2px solid #444444;
+    }
+    75% {
+        background-color: rgba(145, 0, 0, 0.5);
+        border: 2px solid #910000;
     }
     100% {
         background-color: rgba(0, 0, 0, 0.0);
@@ -175,7 +171,7 @@
     border-block-end: 2px solid #444444;
     border-inline-end: 2px solid rgba(0, 0, 0, 0);
 
-    z-index: 2;
+    z-index: 10;
 }
 
 
@@ -192,5 +188,5 @@
     border-block-start: 2px solid #444444;
     border-block-end: 2px solid #444444;
     border-inline-start: 2px solid rgba(0, 0, 0, 0);
-    z-index: 2;
+    z-index: 10;
 }
