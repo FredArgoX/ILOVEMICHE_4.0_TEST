@@ -180,6 +180,21 @@ document.addEventListener('keydown', (e) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
 // Modal Contents
 const modalContents = {
   p01aguachiles: `
@@ -231,6 +246,7 @@ modalButtons.forEach(button => {
 
 
 
+*/
 
 
 
@@ -244,6 +260,51 @@ modalButtons.forEach(button => {
 
 
 
+const chamoyadas = {
+    'product':'chamoyadas',
+    'description':'Pulpa natural, azúcar, con chamoy',
+    'content':Array(
+        {'subtitle':'',
+        'description':'',
+        'flavors':['Limón', 'Mango', 'Maracuya', 'Pepino con Limón', 'Fresa', 'Frutos Rojos', 'Cereza', 'Tamarindo', 'Nanche', 'Guayaba', 'Grosella', 'Mandarina (temporada)'],
+        'table':[
+            {'option':'Sin alcohol',                      'price_litro': 70,  'price_top': 110},
+            {'option':'Con Ron Bacardi',                  'price_litro': 110, 'price_top': 150},
+            {'option':'Con Tequila Jose Cuervo Especial', 'price_litro': 130, 'price_top': 170},
+            {'option':'Con Vodka Smirnoff',               'price_litro': 120, 'price_top': 160},
+            {'option':'Con Mezcal Moskalti',              'price_litro': 120, 'price_top': 170},
+        ]},
+    ),
+};
+const cerveza = {
+    'product':'cerveza',
+    'description':'',
+    'content':Array(
+        {'subtitle':'',
+        'description':'',
+        'flavors':['Cubana (Limón, sal y escarcada con sal)', 'Michelada (Limón, sal y salsa de la casa)', 'Clamochela (Limón, sal, salsa de la casa y clamato 80mL)'],
+        'table':[
+            {'option':'Corona / Victoria',               'price_litro':105,  'price_top':150},
+            {'option':'Litro con Topping de aguachile',  'price_unique':195},
+            {'option':'Litro con Banderilla de camaron', 'price_unique':145},
+        ]},
+        {'subtitle':'Cerveza de 1/2',
+        'description':'',
+        'flavors':['Corona', 'Victoria', 'Corona Cero', 'Corona light'],
+        'table':[
+            {'option':' ',              'price_unique':45},
+            {'option':'Vaso Preparado',           'price_unique':25},
+            {'option':'Cubeta de Cerveza de 1/2', 'price_6pzas' :250, 'price_12pzas':500},
+        ]},
+        {'subtitle':'Clamato Preparado',
+        'description':'Clamato, Limón, salsas, sal y agua mineral',
+        'flavors':[],
+        'table':[
+            {'option':' ', 'price_litro':80,  'price_top':130},
+            {'option':'Banderilla de aceitunas', 'price_unique':20},
+        ]},
+    ),
+};
 
 
 
@@ -252,8 +313,37 @@ modalButtons.forEach(button => {
 
 
 
+/* Products encompasing Array */
+const products_iterable = Array(
+    chamoyadas,
+    cerveza
+);
 
 
+/* Products Title over red frame and Description */
+products_iterable.forEach(product => {
+    //
+    //const html_title     = document.getElementById(`title_${product.product}`);
+    //
+    //
+    const html_title = document.createElement('h1');
+    html_title.id = `title_${product.product}`;
+    html_title.className = 'product-title';
+    html_title.innerText = product.product;
+    //
+    const html_description = document.createElement('p');
+    html_description.id = `description_${product.product}`;
+    html_description.className = 'product-description';
+    html_description.innerText = product.description;
+    //
+    
+    //
+    /*
+    html_title.innerText = product.product;
+    const html_description     = document.getElementById(`description_${product.product}`);
+    html_description.innerText = product.description;
+    */
+});
 
 
 
