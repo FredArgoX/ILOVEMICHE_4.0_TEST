@@ -1,4 +1,7 @@
-// Trigger Buttons
+// Trigger Buttons (Set)
+modalButtons = document.querySelectorAll('.btnx');
+
+// Trigger Buttons (Individual)
 const BTN_p01aguachiles       = document.getElementById('p01aguachiles');
 const BTN_p02ceviches         = document.getElementById('p02ceviches');      
 const BTN_p03botaneando       = document.getElementById('p03botaneando');      
@@ -6,7 +9,7 @@ const BTN_p04hamburguesas     = document.getElementById('p04hamburguesas');
 const BTN_p05jochos           = document.getElementById('p05jochos');  
 const BTN_p06gonzalitas       = document.getElementById('p06gonzalitas');      
 const BTN_p07                 = document.getElementById('p07');
-const trigger          = document.getElementById('p08');
+const BTN_p08                 = document.getElementById('p08');
 const BTN_p09chamoyadas       = document.getElementById('p09chamoyadas');  
 const BTN_p10cerveza          = document.getElementById('p10cerveza');      
 const BTN_p11mojitos          = document.getElementById('p11mojitos');      
@@ -49,27 +52,63 @@ const navBullets = document.getElementById('sw-nav');
 let originalBodyOverflow = '';
 let wasSwiperEnabled = true;
 
-// Open modal
-// ↓↓↓↓↓↓
-trigger.addEventListener('click', () => {
+// Reusable function to open modal
+function openModal() {
+    // Prevent background scrolling
     originalBodyOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';   // Prevent any background scroll
-    contentX.style.opacity = 0.0;
-    navBullets.style.opacity = 0.0;
-
-    // Disable Swiper mousewheel (and touch if you want)
+    document.body.style.overflow = 'hidden';
+    // Fade out main content and navigation
+    contentX.style.opacity = '0';
+    navBullets.style.opacity = '0';
+    // Disable Swiper mousewheel and touch swiping
     if (swiper && swiper.mousewheel) {
         wasSwiperEnabled = swiper.mousewheel.enabled;
         swiper.mousewheel.disable();
     }
-
-    // Optional: also disable touch swiping on the swiper while modal is open
-    swiper.allowTouchMove = false;
-
+    if (swiper) {
+        swiper.alowwTouchMove = false;
+    }
+    // Reset scroll and show modal
     modalArea.scrollTop = 0;
     modal.style.display = 'flex';
-    
-});
+};
+
+BTN_p01aguachiles.addEventListener('click', openModal);
+BTN_p02ceviches.addEventListener('click', openModal);
+BTN_p03botaneando.addEventListener('click', openModal);
+BTN_p04hamburguesas.addEventListener('click', openModal);
+BTN_p05jochos.addEventListener('click', openModal);
+BTN_p06gonzalitas.addEventListener('click', openModal);
+// BTN_p07.addEventListener('click', openModal); 
+// BTN_p08.addEventListener('click', openModal);
+BTN_p09chamoyadas.addEventListener('click', openModal);
+BTN_p10cerveza.addEventListener('click', openModal);
+BTN_p11mojitos.addEventListener('click', openModal);
+BTN_p12pinacoladafrappe.addEventListener('click', openModal);
+BTN_p13cuba.addEventListener('click', openModal);
+BTN_p14whisky.addEventListener('click', openModal);
+BTN_p15mentirosa.addEventListener('click', openModal);
+BTN_p16jacaranda.addEventListener('click', openModal);
+BTN_p17diablito.addEventListener('click', openModal);
+BTN_p18bluelove.addEventListener('click', openModal);
+BTN_p19bicolor.addEventListener('click', openModal);
+BTN_p20cielorosa.addEventListener('click', openModal);
+BTN_p21consentida.addEventListener('click', openModal);
+BTN_p22margaritasfrappe.addEventListener('click', openModal);
+BTN_p23paloma.addEventListener('click', openModal);
+BTN_p24frappevino.addEventListener('click', openModal);
+BTN_p25tintodeverano.addEventListener('click', openModal);
+BTN_p26copadevino.addEventListener('click', openModal);
+BTN_p27caribenas.addEventListener('click', openModal);
+BTN_p28sirena.addEventListener('click', openModal);
+BTN_p29mezcal.addEventListener('click', openModal);
+BTN_p30carajillos.addEventListener('click', openModal);
+BTN_p31cubetas.addEventListener('click', openModal);
+BTN_p32tablas.addEventListener('click', openModal);
+BTN_p33varios.addEventListener('click', openModal);
+BTN_p34frappes.addEventListener('click', openModal);
+BTN_p35legos.addEventListener('click', openModal);
+BTN_p36topping.addEventListener('click', openModal);
 
 // Close modal
 const closeModal = () => {
@@ -77,17 +116,14 @@ const closeModal = () => {
     navBullets.style.opacity = 1.0;
     modalArea.scrollTop = 0;
     modal.style.display = 'none';
-
     // Restore body scroll
     document.body.style.overflow = originalBodyOverflow;
-
     // Re-enable Swiper mousewheel
     if (swiper && swiper.mousewheel) {
         if (wasSwiperEnabled) {
             swiper.mousewheel.enable();
         }
     }
-
     // If you disabled touch move, re-enable it:
     swiper.allowTouchMove = true;
 };
@@ -108,6 +144,170 @@ document.addEventListener('keydown', (e) => {
         closeModal();
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Modal Contents
+const modalContents = {
+  p01aguachiles: `
+    <h2>Login</h2>
+    <form>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  `,
+
+  p02ceviches: `
+    <h2>Create Account</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Register</button>
+    </form>
+  `,
+
+  p03botaneando: `
+    <h2>Forgot Password</h2>
+    <p>Enter your email to reset password</p>
+    <form>
+      <input type="email" placeholder="Email" required>
+      <button type="submit">Send Reset Link</button>
+    </form>
+  `
+};
+
+
+// Click listeners
+modalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const idx = button.id;
+        if (modalContents[idx]) {
+            modalArea.innerHTML = modalContents[idx];
+            modal.style.display = 'flex';
+        }
+        else {
+            console.warn(`No content for modal ${idx}`);
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
