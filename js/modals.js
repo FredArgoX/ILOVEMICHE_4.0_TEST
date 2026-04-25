@@ -146,27 +146,6 @@ document.addEventListener('keydown', (e) => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ================================================
    COMPLETE NORMALIZED MENU DATA STRUCTURE
    ================================================ */
@@ -332,8 +311,8 @@ const menuData = [
         description: "",
         items: [
             {
-                subtitle: "Alitas",
-                description: "Sencillas (6pzas) Con verdura y aderezo",
+                subtitle: "Alitas Sencillas",
+                description: "(6pzas) Con verdura y aderezo",
                 options: [{ name: "", price: 130 }]
             },
             {
@@ -342,22 +321,22 @@ const menuData = [
                 options: [{ name: "", price: 150 }]
             },
             {
-                subtitle: "Combo 1",
+                subtitle: "Alitas Combo 1",
                 description: "(12pzas) Acompañadas de nachos con queso, verdura y aderezo",
                 options: [{ name: "", price: 250 }]
             },
             {
-                subtitle: "Combo 2",
+                subtitle: "Alitas Combo 2",
                 description: "(20pzas) Acompañadas de nachos con queso, verdura y aderezo",
                 options: [{ name: "", price: 345 }]
             },
             {
-                subtitle: "Combo 3",
+                subtitle: "Alitas Combo 3",
                 description: "(30pzas) Acompañadas de nachos con queso/chorizo, verdura y aderezo",
                 options: [{ name: "", price: 535 }]
             },
             {
-                subtitle: "Combo 4",
+                subtitle: "Alitas Combo 4",
                 description: "(50pzas) Acompañadas de nachos con queso/chorizo, verdura y aderezo",
                 options: [{ name: "", price: 860 }]
             },
@@ -399,6 +378,33 @@ const menuData = [
                     { name: "500 g", price: 270 },
                     { name: "1 kg", price: 520 }
                 ]
+            },
+            {
+                subtitle: "Salsas",
+                description: "",
+                options: [
+                    { name: "BBQ"},
+                    { name: "Mango"},
+                    { name: "Mango habanero"},
+                    { name: "Original"},
+                    { name: "Mango sriracha"},
+                    { name: "Picositas"},
+                    { name: "Pelon pelo rico"},
+                ]
+            },
+            {
+                subtitle: "Extra",
+                description: "",
+                options: [
+                    { name: "Piña", price: 20 },
+                    { name: "Queso manchego", price: 35 },
+                    { name: "Jamon", price: 15 },
+                    { name: "Tocino", price: 20 },
+                    { name: "Salsa", price: 20 },
+                    { name: "Alita", price: 23 },
+                    { name: "Carne (Mixta, Can, Tax)", price: 85 },
+                    { name: "Carne (Mexicana)", price: 95 }
+                ]
             }
         ]
     },
@@ -411,16 +417,34 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "Sin alcohol", price: 70, note: "Litro" },
-                    { name: "Sin alcohol", price: 110, note: "Con Topping" },
-                    { name: "Con Ron Bacardi", price: 110, note: "Litro" },
-                    { name: "Con Ron Bacardi", price: 150, note: "Con Topping" },
-                    { name: "Con Tequila Jose Cuervo Especial", price: 130, note: "Litro" },
-                    { name: "Con Tequila Jose Cuervo Especial", price: 170, note: "Con Topping" },
-                    { name: "Con Vodka Smirnoff", price: 120, note: "Litro" },
-                    { name: "Con Vodka Smirnoff", price: 160, note: "Con Topping" },
-                    { name: "Con Mezcal Moskalti", price: 120, note: "Litro" },
-                    { name: "Con Mezcal Moskalti", price: 170, note: "Con Topping" }
+                    { name: "Limon"},
+                    { name: "Mango"},
+                    { name: "Maracuya"},
+                    { name: "Pepinocon limon"},
+                    { name: "Fresa"},
+                    { name: "Frutos rojos"},
+                    { name: "Cereza"},
+                    { name: "Tamarindo"},
+                    { name: "Nanche"},
+                    { name: "Guayaba"},
+                    { name: "Grosella"},
+                    { name: "Mandarina (temporada)"}
+                ]
+            },
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "(L) - Sin alcohol", price: 70, note: "Litro" },
+                    { name: "(LCT) - Sin alcohol", price: 110, note: "Con Topping" },
+                    { name: "(L) - Con Ron Bacardi", price: 110, note: "Litro" },
+                    { name: "(LCT) - Con Ron Bacardi", price: 150, note: "Con Topping" },
+                    { name: "(L) - Con Tequila Jose Cuervo Especial", price: 130, note: "Litro" },
+                    { name: "(LCT) - Con Tequila Jose Cuervo Especial", price: 170, note: "Con Topping" },
+                    { name: "(L) - Con Vodka Smirnoff", price: 120, note: "Litro" },
+                    { name: "(LCT) - Con Vodka Smirnoff", price: 160, note: "Con Topping" },
+                    { name: "(L) - Con Mezcal Moskalti", price: 120, note: "Litro" },
+                    { name: "(LCT) - Con Mezcal Moskalti", price: 170, note: "Con Topping" }
                 ]
             }
         ]
@@ -434,10 +458,19 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "Corona / Victoria", price: 105, note: "Litro" },
-                    { name: "Corona / Victoria", price: 150, note: "Con Topping" },
-                    { name: "Litro con Topping de aguachile", price: 195 },
-                    { name: "Litro con Banderilla de camaron", price: 145 }
+                    { name: "Cubana (Limon, sal, y escarchada con sal)" },
+                    { name: "Michelada (Limon, sal, y salsa de la casa)" },
+                    { name: "Clamochela (Limon, sal, salsa de la casa, y clamato de 80mL)" },
+                ]
+            },
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "(L) - Corona / Victoria", price: 105, note: "Litro" },
+                    { name: "(LCT) - Corona / Victoria", price: 150, note: "Con Topping" },
+                    { name: "(LCT) de aguachile", price: 195 },
+                    { name: "(L) con Banderilla de camaron", price: 145 }
                 ]
             },
             {
@@ -454,8 +487,8 @@ const menuData = [
                 subtitle: "Clamato Preparado",
                 description: "Clamato, Limón, salsas, sal y agua mineral",
                 options: [
-                    { name: "", price: 80, note: "Litro" },
-                    { name: "", price: 130, note: "Con Topping" },
+                    { name: "L", price: 80, note: "Litro" },
+                    { name: "LCT", price: 130, note: "Con Topping" },
                     { name: "Banderilla de aceitunas", price: 20 }
                 ]
             }
@@ -470,8 +503,34 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "Limon / Mora Azul / Maracuya / Pepino / Mango (temporada)", price: 110, note: "Litro" },
-                    { name: "", price: 150, note: "Con Topping" }
+                    { name: "Limon" },
+                    { name: "Mora azul" },
+                    { name: "Maracuya" },
+                    { name: "Pepino" },
+                    { name: "Mango (temporada)" },
+                    { name: "L", price: 110, note: "Litro" },
+                    { name: "LCT", price: 150, note: "Con Topping" }
+                ]
+            },
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Fresa" },
+                    { name: "Frutos rojos" },
+                    { name: "Vino" },
+                    { name: "Cereza" },
+                    { name: "L", price: 120, note: "Litro" },
+                    { name: "LCT", price: 170, note: "Con Topping" }
+                ]
+            },
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Mandarina" },
+                    { name: "L", price: 135, note: "Litro" },
+                    { name: "LCT", price: 175, note: "Con Topping" }
                 ]
             }
         ]
