@@ -544,8 +544,8 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "", price: 110, note: "Litro" },
-                    { name: "", price: 150, note: "Con Topping" }
+                    { name: "L", price: 110, note: "Litro" },
+                    { name: "LCT", price: 150, note: "Con Topping" }
                 ]
             }
         ]
@@ -559,8 +559,10 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "Campechano (agua mineral y coca) / Pintado (poca coca cola)", price: 110, note: "Litro" },
-                    { name: "", price: 160, note: "Con Topping" }
+                    { name: "Campechano (agua mineral y coca)" },
+                    { name: "Pintado (poca coca cola)" },
+                    { name: "L", price: 110, note: "Litro" },
+                    { name: "LCT", price: 160, note: "Con Topping" }
                 ]
             }
         ]
@@ -574,12 +576,12 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "Passport", price: 170, note: "Litro" },
-                    { name: "Passport", price: 220, note: "Con Topping" },
-                    { name: "Black & White", price: 180, note: "Litro" },
-                    { name: "Black & White", price: 230, note: "Con Topping" },
-                    { name: "Red Label", price: 190, note: "Litro" },
-                    { name: "Red Label", price: 240, note: "Con Topping" }
+                    { name: "(L) - Passport", price: 170, note: "Litro" },
+                    { name: "(LCT) - Passport", price: 220, note: "Con Topping" },
+                    { name: "(L) - Black & White", price: 180, note: "Litro" },
+                    { name: "(LCT) - Black & White", price: 230, note: "Con Topping" },
+                    { name: "(L) - Red Label", price: 190, note: "Litro" },
+                    { name: "(LCT) - Red Label", price: 240, note: "Con Topping" }
                 ]
             }
         ]
@@ -593,8 +595,8 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "", price: 150, note: "Litro" },
-                    { name: "", price: 190, note: "Con Topping" }
+                    { name: "L", price: 150, note: "Litro" },
+                    { name: "LCT", price: 190, note: "Con Topping" }
                 ]
             }
         ]
@@ -608,8 +610,8 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "", price: 120, note: "Litro" },
-                    { name: "", price: 170, note: "Con Topping" }
+                    { name: "L", price: 120, note: "Litro" },
+                    { name: "LCT", price: 170, note: "Con Topping" }
                 ]
             }
         ]
@@ -623,8 +625,8 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "", price: 130, note: "Litro" },
-                    { name: "", price: 180, note: "Con Topping" }
+                    { name: "L", price: 130, note: "Litro" },
+                    { name: "LCT", price: 180, note: "Con Topping" }
                 ]
             }
         ]
@@ -638,8 +640,8 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "", price: 110, note: "Litro" },
-                    { name: "", price: 160, note: "Con Topping" }
+                    { name: "L", price: 110, note: "Litro" },
+                    { name: "LCT", price: 160, note: "Con Topping" }
                 ]
             }
         ]
@@ -653,8 +655,8 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "", price: 110, note: "Litro" },
-                    { name: "", price: 160, note: "Con Topping" }
+                    { name: "L", price: 110, note: "Litro" },
+                    { name: "LCT", price: 160, note: "Con Topping" }
                 ]
             }
         ]
@@ -668,8 +670,8 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "", price: 120, note: "Litro" },
-                    { name: "", price: 160, note: "Con Topping" }
+                    { name: "L", price: 120, note: "Litro" },
+                    { name: "LCT", price: 160, note: "Con Topping" }
                 ]
             }
         ]
@@ -683,8 +685,8 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "", price: 130, note: "Litro" },
-                    { name: "", price: 180, note: "Con Topping" }
+                    { name: "L", price: 130, note: "Litro" },
+                    { name: "LCT", price: 180, note: "Con Topping" }
                 ]
             }
         ]
@@ -698,8 +700,19 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "Limón, Mango, Maracuya, Pepino con Limón, Fresa, Frutos Rojos, Cereza, Tamarindo, Nanche, Guayaba, Mandarina (temporada)", price: 130, note: "Litro" },
-                    { name: "", price: 170, note: "Con Topping" }
+                    { name: "Limon" },
+                    { name: "Mango" },
+                    { name: "Maracuya" },
+                    { name: "Pepino con limon" },
+                    { name: "Fresa" },
+                    { name: "Frutos rojos" },
+                    { name: "Cereza" },
+                    { name: "Tamarindo" },
+                    { name: "Nanche" },
+                    { name: "Guayaba" },
+                    { name: "Mandarina (temporada)" },
+                    { name: "L", price: 130, note: "Litro" },
+                    { name: "LCT", price: 170, note: "Con Topping" }
                 ]
             }
         ]
@@ -713,8 +726,16 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "Limón, Fresa, Frutos rojos, Maracuya, Mango, Jamaica, Cereza, Mandarina (temporada)", price: 130, note: "Litro" },
-                    { name: "", price: 170, note: "Con Topping" }
+                    { name: "Limon" },
+                    { name: "Fresa" },
+                    { name: "Maracuya" },
+                    { name: "Frutos rojos" },
+                    { name: "Mango" },
+                    { name: "Jamaica" },
+                    { name: "Cereza" },
+                    { name: "Mandarina (temporada)" },
+                    { name: "L", price: 130, note: "Litro" },
+                    { name: "LCT", price: 170, note: "Con Topping" }
                 ]
             }
         ]
@@ -728,8 +749,8 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "", price: 90, note: "Litro" },
-                    { name: "", price: 140, note: "Con Topping" }
+                    { name: "L", price: 90, note: "Litro" },
+                    { name: "LCT", price: 140, note: "Con Topping" }
                 ]
             }
         ]
@@ -743,8 +764,8 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "", price: 100, note: "Litro" },
-                    { name: "", price: 140, note: "Con Topping" }
+                    { name: "L", price: 100, note: "Litro" },
+                    { name: "LCT", price: 140, note: "Con Topping" }
                 ]
             }
         ]
@@ -770,8 +791,13 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "Mango-Piña, Tinto, Durazno, Manzana Verde, Fresa", price: 100, note: "Litro" },
-                    { name: "", price: 140, note: "Con Topping" }
+                    { name: "Mango-Piña" },
+                    { name: "Tinto" },
+                    { name: "Durazno" },
+                    { name: "Manzana verde" },
+                    { name: "Fresa" },
+                    { name: "L", price: 100, note: "Litro" },
+                    { name: "LCT", price: 140, note: "Con Topping" }
                 ]
             }
         ]
@@ -785,8 +811,8 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "", price: 120, note: "Litro" },
-                    { name: "", price: 160, note: "Con Topping" }
+                    { name: "L", price: 120, note: "Litro" },
+                    { name: "LCT", price: 160, note: "Con Topping" }
                 ]
             }
         ]
@@ -797,35 +823,44 @@ const menuData = [
         description: "",
         items: [
             {
-                subtitle: "Mezcal Blanco Joven",
+                subtitle: "Blanco Joven",
                 description: "",
                 options: [
-                    { name: "Cupreata", price: 40, note: "Shot" },
-                    { name: "Cupreata", price: 400, note: "Botella" },
-                    { name: "Espadin", price: 40, note: "Shot" },
-                    { name: "Espadin", price: 400, note: "Botella" },
-                    { name: "Tobala", price: 40, note: "Shot" },
-                    { name: "Tobala", price: 400, note: "Botella" }
+                    { name: "Cupreata" },
+                    { name: "Espadin" },
+                    { name: "Tobala" },
+                    { name: "Shot", price: 40, note: "Shot" },
+                    { name: "Botella", price: 400, note: "Shot" }
                 ]
             },
             {
                 subtitle: "Mezcales Amarak",
                 description: "",
-                options: [{ name: "Licor de Agave/Pechuga", price: 50, note: "Shot / Botella 500" }]
+                options: [
+                    { name: "Licor de Agave/Pechuga" },
+                    { name: "Shot", price: 40, note: "Shot" },
+                    { name: "Botella", price: 400, note: "Shot" }
+                ]
             },
             {
                 subtitle: "Mezcales de fruta",
                 description: "",
                 options: [
-                    { name: "Maracuya", price: 30, note: "Shot / Botella 300" },
-                    { name: "Jamaica", price: 30, note: "Shot / Botella 300" },
-                    { name: "Tamarindo", price: 30, note: "Shot / Botella 300" }
+                    { name: "Maracuya" },
+                    { name: "Jamaica" },
+                    { name: "Tamarindo" },
+                    { name: "Shot", price: 30, note: "Shot" },
+                    { name: "Botella", price: 300, note: "Shot" }
                 ]
             },
             {
                 subtitle: "Crema de Mezcal",
                 description: "",
-                options: [{ name: "Cafe", price: 30, note: "Shot / Botella 300" }]
+                options: [
+                    { name: "Cafe" },
+                    { name: "Shot", price: 30, note: "Shot" },
+                    { name: "Botella", price: 300, note: "Shot" }
+                ]
             }
         ]
     },
@@ -855,32 +890,42 @@ const menuData = [
                 subtitle: "Cubeta de Mojito",
                 description: "",
                 options: [
-                    { name: "Frutos Rojos, Vino, Fresa, Cereza, Mandarina", price: 600, note: "Local" },
-                    { name: "", price: 720, note: "Domicilio" }
+                    { name: "Frutos Rojos" },
+                    { name: "Vino" },
+                    { name: "Fresa" },
+                    { name: "Cereza" },
+                    { name: "Mandarina" },
+                    { name: "Local", price: 600, note: "Local" },
+                    { name: "Domicilio", price: 720, note: "Domicilio" }
                 ]
             },
             {
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "Mango, Pepino, Mora Azul, Maracuya, Limon", price: 500, note: "Local" },
-                    { name: "", price: 620, note: "Domicilio" }
+                    { name: "Mango" },
+                    { name: "Pepino" },
+                    { name: "Mora azul" },
+                    { name: "Maracuya" },
+                    { name: "Limon" },
+                    { name: "Local", price: 500, note: "Local" },
+                    { name: "Domicilio", price: 620, note: "Domicilio" }
                 ]
             },
             {
                 subtitle: "Cubeta de Paloma",
                 description: "",
                 options: [
-                    { name: "", price: 600, note: "Local" },
-                    { name: "", price: 700, note: "Domicilio" }
+                    { name: "Local", price: 600, note: "Local" },
+                    { name: "Domicilio", price: 700, note: "Domicilio" }
                 ]
             },
             {
                 subtitle: "Cubeta de Blue Love o Bicolor",
                 description: "",
                 options: [
-                    { name: "", price: 550, note: "Local" },
-                    { name: "", price: 670, note: "Domicilio" }
+                    { name: "Local", price: 550, note: "Local" },
+                    { name: "Domicilio", price: 670, note: "Domicilio" }
                 ]
             }
         ]
@@ -921,15 +966,23 @@ const menuData = [
                 ]
             },
             {
-                subtitle: "",
+                subtitle: "Limonada",
                 description: "",
                 options: [
-                    { name: "Limonada", price: 60, note: "Litro" },
-                    { name: "Limonada", price: 100, note: "Con Topping" },
-                    { name: "Limonada", price: 40, note: "Chica" },
-                    { name: "Limonada", price: 60, note: "Chica con Topping" },
+                    { name: "L", price: 60, note: "Litro" },
+                    { name: "LCT", price: 100, note: "Con Topping" },
+                    { name: "Ch", price: 40, note: "Chica" },
+                    { name: "ChCT", price: 60, note: "Chica con Topping" },
                     { name: "Chamoyada (sin alcohol)", price: 45, note: "Chica" },
                     { name: "Chamoyada (sin alcohol)", price: 70, note: "Chica con Topping" }
+                ]
+            },
+            {
+                subtitle: "Chamoyada (sin alcohol)",
+                description: "",
+                options: [
+                    { name: "Ch", price: 45, note: "Chica" },
+                    { name: "ChCT", price: 70, note: "Chica con Topping" }
                 ]
             }
         ]
@@ -943,10 +996,53 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "Galleta Oreo, Moka, Capuchino Original, Chocomenta, Hot Cocoa, Mazapán, Taro, Matcha", price: 95, note: "Chica" },
-                    { name: "", price: 125, note: "Chica con Topping" },
-                    { name: "", price: 110, note: "Grande" },
-                    { name: "", price: 145, note: "Grande con Topping" }
+                    { name: "Galleta oreo" },
+                    { name: "Moka" },
+                    { name: "Capuchino original" },
+                    { name: "Chocomenta" },
+                    { name: "Hot cocoa" },
+                    { name: "Mazapan" },
+                    { name: "Taro" },
+                    { name: "Matcha" },
+                    { name: "Ch", price: 95, note: "Chica" },
+                    { name: "ChCT", price: 125, note: "Chica con Topping" },
+                    { name: "G", price: 110, note: "Grande" },
+                    { name: "GCT", price: 145, note: "Grande con Topping" }
+                ]
+            },
+            {
+                subtitle: "Toppings para frappes",
+                description: "",
+                options: [
+                    { name: "Palito de chocolate" },
+                    { name: "Bocadin" },
+                    { name: "Bocadin" },
+                    { name: "Bocadin" },
+                    { name: "Huesitos de chocolate" },
+                    { name: "Chocoretas" },
+                    { name: "Mini lunetas" },
+                    { name: "Huevitos" },
+                    { name: "Chocofresky's" },
+                    { name: "Galleta waffle" },
+                    { name: "Mini bubulubu" },
+                    { name: "Durazno en almíbar" },
+                    { name: "Piña en almíbar" },
+                    { name: "Fresa" },
+                    { name: "Trufa de lunetas" },
+                    { name: "Trufa de ferrero" },
+                    { name: "Trufa de algodón de azúcar" },
+                    { name: "Trufa de mazapan" },
+                    { name: "Trufa de chocoretas" }
+                ]
+            },
+            {
+                subtitle: "",
+                description: "Puedes agregar a tu frappe lo siguiente:",
+                options: [
+                    { name: "Paleta congelada e chocolate", price: 30 },
+                    { name: "Panquesito de chocolate", price: 11 },
+                    { name: "Gansito", price: 15 },
+                    { name: "Pingüino", price: 15 }
                 ]
             }
         ]
@@ -960,10 +1056,19 @@ const menuData = [
                 subtitle: "",
                 description: "",
                 options: [
-                    { name: "Azul, Rojo, Verde, Amarillo, combinaciones", price: 85, note: "Chica" },
-                    { name: "", price: 120, note: "Chica con Topping" },
-                    { name: "", price: 110, note: "Grande" },
-                    { name: "", price: 150, note: "Grande con Topping" }
+                    { name: "Azul (Curazao)" },
+                    { name: "Rojo (Fresa)" },
+                    { name: "Verde (Manzana)" },
+                    { name: "Amarillo (Mango)" },
+                    { name: "Rosa (Frambuesa)" },
+                    { name: "Azul-Amarillo" },
+                    { name: "Azul-Rojo" },
+                    { name: "Azul-Verde" },
+                    { name: "Rosa-Azul" },
+                    { name: "Ch", price: 85, note: "Chica" },
+                    { name: "ChCT", price: 120, note: "Chica con Topping" },
+                    { name: "G", price: 110, note: "Grande" },
+                    { name: "GCT", price: 150, note: "Grande con Topping" }
                 ]
             }
         ]
