@@ -47,7 +47,7 @@
 
 /* Scrollable area */
 .modal-body {
-    padding: 70px 30px 30px;
+    /*padding: 70px 30px 30px;*/
     max-height: 85vh;
     overflow-y: auto;
     scrollbar-width: thin;
@@ -120,6 +120,7 @@
 }
 
 /* Content inside modal */
+/*
 .modal-body h2 {
     margin-bottom: 20px;
     color: #222;
@@ -132,7 +133,7 @@
     color: #333;
     font-size: 1.1rem;
 }
-
+*/
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }

@@ -167,6 +167,976 @@ document.addEventListener('keydown', (e) => {
 
 
 
+/* ================================================
+   COMPLETE NORMALIZED MENU DATA STRUCTURE
+   ================================================ */
+
+const menuData = [
+    {
+        id: "aguachiles",
+        title: "Aguachiles",
+        description: "Camaron fresco preparado con nuestras salsas especiales",
+        items: [
+            {
+                subtitle: "Aguachile Clasico ILOVEMICHE",
+                description: "Camaron crudo, deliciosas salsas negras, salsa de aguachile verde, cebolla y pepino",
+                options: [
+                    { name: "Chico", price: 190 },
+                    { name: "Mediano", price: 290 },
+                    { name: "Familiar", price: 490 },
+                    { name: "Como Topping", price: 185 }
+                ]
+            },
+            {
+                subtitle: "Aguachile Verde",
+                description: "Camaron crudo, salsa de aguachile verde, cebolla y pepino",
+                options: [
+                    { name: "Chico", price: 190 },
+                    { name: "Mediano", price: 290 },
+                    { name: "Familiar", price: 490 },
+                    { name: "Como Topping", price: 185 }
+                ]
+            },
+            {
+                subtitle: "Aguachile Mango (Temporada)",
+                description: "Camaron crudo, salsa de aguachile verde con mango, cebolla, pepino y mango",
+                options: [
+                    { name: "Chico", price: 190 },
+                    { name: "Mediano", price: 290 },
+                    { name: "Familiar", price: 490 },
+                    { name: "Como Topping", price: 195 }
+                ]
+            },
+            {
+                subtitle: "Torre Taxco",
+                description: "Camaron cristal, camaron coctelero, cebolla morada y pepino",
+                options: [{ name: "", price: 280 }]
+            },
+            {
+                subtitle: "Culichi",
+                description: "Camaron cristal, camaron coctelero, pulpo, cebolla morada y pepino",
+                options: [{ name: "", price: 280 }]
+            }
+        ]
+    },
+    {
+        id: "ceviches",
+        title: "Ceviches",
+        description: "",
+        items: [
+            {
+                subtitle: "Ceviche Clasico ILOVEMICHE",
+                description: "Camaron crudo, clamato, deliciosas salsas negras, jitomate, cebolla, pepino y cilantro",
+                options: [
+                    { name: "Chico", price: 190 },
+                    { name: "Mediano", price: 290 },
+                    { name: "Familiar", price: 490 },
+                    { name: "Como Topping", price: 185 }
+                ]
+            },
+            {
+                subtitle: "Ceviche Pulpo",
+                description: "Camaron crudo, pulpo, clamato, deliciosas salsas negras, jitomate, cebolla, pepino y cilantro",
+                options: [
+                    { name: "Chico", price: 210 },
+                    { name: "Mediano", price: 310 },
+                    { name: "Familiar", price: 510 },
+                    { name: "Como Topping", price: 220 }
+                ]
+            },
+            {
+                subtitle: "Torre ILOVEMICHE",
+                description: "Camaron cristal, camaron coctelero, pulpo, cebolla morada, pepino y jitomate",
+                options: [{ name: "", price: 280 }]
+            }
+        ]
+    },
+    {
+        id: "botaneando",
+        title: "Botaneando",
+        description: "",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Bowl de 5 topping", price: 50 },
+                    { name: "Palomitas", price: 50 },
+                    { name: "Nachos", price: 50 },
+                    { name: "Guacamole", price: 80 },
+                    { name: "Nachos de topping papas", price: 60 },
+                    { name: "30 camarones cocteleros", price: 150 },
+                    { name: "Tenders de pollo (8 pzas)", price: 90 },
+                    { name: "Papas a la francesa", price: 60 },
+                    { name: "Papas a la francesa con Queso", price: 70 },
+                    { name: "Sopa maruchan", price: 50 },
+                    { name: "Dedos de queso (8 pzas)", price: 100 },
+                    { name: "Salchi-papas", price: 90 },
+                    { name: "Burrote", price: 40 }
+                ]
+            }
+        ]
+    },
+    {
+        id: "hamburguesas",
+        title: "Hamburguesas",
+        description: "Toda hamburguesa contiene: Pan / Mayonesa / Jamón / Queso amarillo / Jitomate / Cebolla / Lechuga / Orden de papas",
+        items: [
+            {
+                subtitle: "Sencilla",
+                description: "Carne de res",
+                options: [{ name: "", price: 110 }]
+            },
+            {
+                subtitle: "Hawaiana",
+                description: "Carne de res / Piña",
+                options: [{ name: "", price: 120 }]
+            },
+            {
+                subtitle: "Arrachera",
+                description: "Carne arrachera",
+                options: [{ name: "", price: 160 }]
+            }
+        ]
+    },
+    {
+        id: "jochos",
+        title: "Jochos",
+        description: "",
+        items: [
+            {
+                subtitle: "Hot Dog Sencillo",
+                description: "Pan con mayonesa / Salchicha / Jitomate / Cebolla",
+                options: [{ name: "", price: 49 }]
+            },
+            {
+                subtitle: "Hot Dog con Tocino",
+                description: "Pan con mayonesa / Salchicha con tocino / Jamón / Jitomate / Cebolla",
+                options: [{ name: "", price: 57 }]
+            },
+            {
+                subtitle: "Pizza Dog",
+                description: "Pan con mayonesa / Salchicha / Costra de queso / Salami / Salsa de pizza / Hierbas finas",
+                options: [{ name: "", price: 99 }]
+            },
+            {
+                subtitle: "Queso Dog",
+                description: "Quesote empanizado / Salchicha con tocino / Jitomate / Cebolla",
+                options: [{ name: "", price: 90 }]
+            }
+        ]
+    },
+    {
+        id: "gonzalitas",
+        title: "Gonzalitas",
+        description: "",
+        items: [
+            {
+                subtitle: "Alitas",
+                description: "Sencillas (6pzas) Con verdura y aderezo",
+                options: [{ name: "", price: 130 }]
+            },
+            {
+                subtitle: "Alitas DUO",
+                description: "(6pzas) Con una pequeña porción de papas, verdura y aderezo",
+                options: [{ name: "", price: 150 }]
+            },
+            {
+                subtitle: "Combo 1",
+                description: "(12pzas) Acompañadas de nachos con queso, verdura y aderezo",
+                options: [{ name: "", price: 250 }]
+            },
+            {
+                subtitle: "Combo 2",
+                description: "(20pzas) Acompañadas de nachos con queso, verdura y aderezo",
+                options: [{ name: "", price: 345 }]
+            },
+            {
+                subtitle: "Combo 3",
+                description: "(30pzas) Acompañadas de nachos con queso/chorizo, verdura y aderezo",
+                options: [{ name: "", price: 535 }]
+            },
+            {
+                subtitle: "Combo 4",
+                description: "(50pzas) Acompañadas de nachos con queso/chorizo, verdura y aderezo",
+                options: [{ name: "", price: 860 }]
+            },
+            {
+                subtitle: "Hamburguesas - Sencilla",
+                description: "Carne mixta / lechuga / jitomate / cebolla caramelizada / queso manchego",
+                options: [{ name: "", price: 130 }]
+            },
+            {
+                subtitle: "Hamburguesas - Hawaiana",
+                description: "Carne mixta / lechuga / jitomate / piña / tocino / cebolla caramelizada / queso manchego / jamón",
+                options: [{ name: "", price: 140 }]
+            },
+            {
+                subtitle: "Hamburguesas - Canadiense",
+                description: "Pechuga empanizada / lechuga / jitomate / cebolla caramelizada / queso manchego / tocino / salsa BBQ",
+                options: [{ name: "", price: 140 }]
+            },
+            {
+                subtitle: "Hamburguesas - Taxqueña",
+                description: "Carne al pastor / chile morrón / piña / queso manchego / cebolla caramelizada",
+                options: [{ name: "", price: 140 }]
+            },
+            {
+                subtitle: "Hamburguesas - Mexicana",
+                description: "Carne arrachera / lechuga / jitomate / cebolla caramelizada / queso manchego / guacamole",
+                options: [{ name: "", price: 150 }]
+            },
+            {
+                subtitle: "Hamburguesas - Mamalona",
+                description: "Combinación de SENCILLA / HAWAIANA / CANADIENSE",
+                options: [{ name: "", price: 330 }]
+            },
+            {
+                subtitle: "Costillas",
+                description: "",
+                options: [
+                    { name: "300 g", price: 165 },
+                    { name: "500 g", price: 270 },
+                    { name: "1 kg", price: 520 }
+                ]
+            }
+        ]
+    },
+    {
+        id: "chamoyadas",
+        title: "Chamoyadas",
+        description: "Pulpa natural, azúcar, con chamoy",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Sin alcohol", price: 70, note: "Litro" },
+                    { name: "Sin alcohol", price: 110, note: "Con Topping" },
+                    { name: "Con Ron Bacardi", price: 110, note: "Litro" },
+                    { name: "Con Ron Bacardi", price: 150, note: "Con Topping" },
+                    { name: "Con Tequila Jose Cuervo Especial", price: 130, note: "Litro" },
+                    { name: "Con Tequila Jose Cuervo Especial", price: 170, note: "Con Topping" },
+                    { name: "Con Vodka Smirnoff", price: 120, note: "Litro" },
+                    { name: "Con Vodka Smirnoff", price: 160, note: "Con Topping" },
+                    { name: "Con Mezcal Moskalti", price: 120, note: "Litro" },
+                    { name: "Con Mezcal Moskalti", price: 170, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "cerveza",
+        title: "Cerveza",
+        description: "",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Corona / Victoria", price: 105, note: "Litro" },
+                    { name: "Corona / Victoria", price: 150, note: "Con Topping" },
+                    { name: "Litro con Topping de aguachile", price: 195 },
+                    { name: "Litro con Banderilla de camaron", price: 145 }
+                ]
+            },
+            {
+                subtitle: "Cerveza de 1/2",
+                description: "",
+                options: [
+                    { name: "Corona / Victoria / Corona Cero / Corona light", price: 45 },
+                    { name: "Vaso Preparado", price: 25 },
+                    { name: "Cubeta de Cerveza de 1/2 (6 pzas)", price: 250 },
+                    { name: "Cubeta de Cerveza de 1/2 (12 pzas)", price: 500 }
+                ]
+            },
+            {
+                subtitle: "Clamato Preparado",
+                description: "Clamato, Limón, salsas, sal y agua mineral",
+                options: [
+                    { name: "", price: 80, note: "Litro" },
+                    { name: "", price: 130, note: "Con Topping" },
+                    { name: "Banderilla de aceitunas", price: 20 }
+                ]
+            }
+        ]
+    },
+    {
+        id: "mojitos",
+        title: "Mojitos",
+        description: "Hierbabuena, limon, azucar, pulpa, Licor Ron Bacardi",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Limon / Mora Azul / Maracuya / Pepino / Mango (temporada)", price: 110, note: "Litro" },
+                    { name: "", price: 150, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "pinacoladafrappe",
+        title: "Piña Colada Frappe",
+        description: "Jugo de piña, crema de coco, azucar, Licor Ron Bacardi",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "", price: 110, note: "Litro" },
+                    { name: "", price: 150, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "cuba",
+        title: "Cuba",
+        description: "Ron Bacardi, agua mineral, coca, toque de limon",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Campechano (agua mineral y coca) / Pintado (poca coca cola)", price: 110, note: "Litro" },
+                    { name: "", price: 160, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "whisky",
+        title: "Whisky",
+        description: "Acompañado con agua mineral y manzanita",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Passport", price: 170, note: "Litro" },
+                    { name: "Passport", price: 220, note: "Con Topping" },
+                    { name: "Black & White", price: 180, note: "Litro" },
+                    { name: "Black & White", price: 230, note: "Con Topping" },
+                    { name: "Red Label", price: 190, note: "Litro" },
+                    { name: "Red Label", price: 240, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "mentirosa",
+        title: "Mentirosa",
+        description: "Vodka, manzana verde, refresco de lima, perlas explosivas de manzana verde",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "", price: 150, note: "Litro" },
+                    { name: "", price: 190, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "jacaranda",
+        title: "Jacaranda",
+        description: "Vodka Smirnoff, infusion floral, endulzante, agua mineral, limon. Cambia de color",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "", price: 120, note: "Litro" },
+                    { name: "", price: 170, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "diablito",
+        title: "Diablito",
+        description: "Vodka Smirnoff tamarindo, refresco de lima, refresco de toronja, pulpa de tamarindo",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "", price: 130, note: "Litro" },
+                    { name: "", price: 180, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "bluelove",
+        title: "Blue Love",
+        description: "Vodka Smirnoff, bebida energetica, refresco de lima",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "", price: 110, note: "Litro" },
+                    { name: "", price: 160, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "bicolor",
+        title: "Bicolor",
+        description: "Vodka Smirnoff, bebida energetica, jugo de arandano, refresco de lima",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "", price: 110, note: "Litro" },
+                    { name: "", price: 160, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "cielorosa",
+        title: "Cielo Rosa",
+        description: "Vodka Smirnoff, Algodon de azucar, refresco de lima",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "", price: 120, note: "Litro" },
+                    { name: "", price: 160, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "consentida",
+        title: "Consentida",
+        description: "Vodka, Limón, Jugo de sandía arizona, Refresco de lima",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "", price: 130, note: "Litro" },
+                    { name: "", price: 180, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "margaritasfrappe",
+        title: "Margaritas Frappe",
+        description: "Tequila Jose Cuervo Especial o Mezcal Moskalti, Licor Controy, Limon, azucar y pulpa natural",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Limón, Mango, Maracuya, Pepino con Limón, Fresa, Frutos Rojos, Cereza, Tamarindo, Nanche, Guayaba, Mandarina (temporada)", price: 130, note: "Litro" },
+                    { name: "", price: 170, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "paloma",
+        title: "Paloma",
+        description: "Tequila Jose Cuervo Especial o Mezcal Moskalti, limon, sal, refresco de toronja",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Limón, Fresa, Frutos rojos, Maracuya, Mango, Jamaica, Cereza, Mandarina (temporada)", price: 130, note: "Litro" },
+                    { name: "", price: 170, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "frappevino",
+        title: "Frappe Vino",
+        description: "Vino tinto, jugo de arandano, azucar, toque de limon",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "", price: 90, note: "Litro" },
+                    { name: "", price: 140, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "tintodeverano",
+        title: "Tinto de Verano",
+        description: "Limón, endulzante, vino, refresco de lima",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "", price: 100, note: "Litro" },
+                    { name: "", price: 140, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "copadevino",
+        title: "Copa de Vino",
+        description: "",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [{ name: "Lambrusco", price: 60 }]
+            }
+        ]
+    },
+    {
+        id: "caribenas",
+        title: "Caribeñas",
+        description: "Pulpa de chamoy, limon, salsas, sal",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Mango-Piña, Tinto, Durazno, Manzana Verde, Fresa", price: 100, note: "Litro" },
+                    { name: "", price: 140, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "sirena",
+        title: "Sirena",
+        description: "Mezcal Tobala, Concentrado de Jamaica, Limon",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "", price: 120, note: "Litro" },
+                    { name: "", price: 160, note: "Con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "mezcal",
+        title: "Mezcal",
+        description: "",
+        items: [
+            {
+                subtitle: "Mezcal Blanco Joven",
+                description: "",
+                options: [
+                    { name: "Cupreata", price: 40, note: "Shot" },
+                    { name: "Cupreata", price: 400, note: "Botella" },
+                    { name: "Espadin", price: 40, note: "Shot" },
+                    { name: "Espadin", price: 400, note: "Botella" },
+                    { name: "Tobala", price: 40, note: "Shot" },
+                    { name: "Tobala", price: 400, note: "Botella" }
+                ]
+            },
+            {
+                subtitle: "Mezcales Amarak",
+                description: "",
+                options: [{ name: "Licor de Agave/Pechuga", price: 50, note: "Shot / Botella 500" }]
+            },
+            {
+                subtitle: "Mezcales de fruta",
+                description: "",
+                options: [
+                    { name: "Maracuya", price: 30, note: "Shot / Botella 300" },
+                    { name: "Jamaica", price: 30, note: "Shot / Botella 300" },
+                    { name: "Tamarindo", price: 30, note: "Shot / Botella 300" }
+                ]
+            },
+            {
+                subtitle: "Crema de Mezcal",
+                description: "",
+                options: [{ name: "Cafe", price: 30, note: "Shot / Botella 300" }]
+            }
+        ]
+    },
+    {
+        id: "carajillos",
+        title: "Carajillos",
+        description: "Cafe expresso, Licor 43",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Shakeado", price: 150 },
+                    { name: "Directo", price: 150 },
+                    { name: "Baileys", price: 150 },
+                    { name: "Turin", price: 170 }
+                ]
+            }
+        ]
+    },
+    {
+        id: "cubetas",
+        title: "Cubetas",
+        description: "",
+        items: [
+            {
+                subtitle: "Cubeta de Mojito",
+                description: "",
+                options: [
+                    { name: "Frutos Rojos, Vino, Fresa, Cereza, Mandarina", price: 600, note: "Local" },
+                    { name: "", price: 720, note: "Domicilio" }
+                ]
+            },
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Mango, Pepino, Mora Azul, Maracuya, Limon", price: 500, note: "Local" },
+                    { name: "", price: 620, note: "Domicilio" }
+                ]
+            },
+            {
+                subtitle: "Cubeta de Paloma",
+                description: "",
+                options: [
+                    { name: "", price: 600, note: "Local" },
+                    { name: "", price: 700, note: "Domicilio" }
+                ]
+            },
+            {
+                subtitle: "Cubeta de Blue Love o Bicolor",
+                description: "",
+                options: [
+                    { name: "", price: 550, note: "Local" },
+                    { name: "", price: 670, note: "Domicilio" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "tablas",
+        title: "Tablas",
+        description: "",
+        items: [
+            {
+                subtitle: "Tabla de Shot",
+                description: "",
+                options: [
+                    { name: "Mezcal de Sabor", price: 120 },
+                    { name: "Mezcal Blanco", price: 160 },
+                    { name: "Mezcal Pechuga", price: 200 },
+                    { name: "Perla Negra", price: 180 }
+                ]
+            }
+        ]
+    },
+    {
+        id: "varios",
+        title: "Varios",
+        description: "",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Caribe Cooler", price: 45 },
+                    { name: "Agua Natural", price: 20 },
+                    { name: "Agua Mineral", price: 35 },
+                    { name: "Refresco", price: 35 },
+                    { name: "Powerade", price: 42 },
+                    { name: "Cafe", price: 40 },
+                    { name: "Te", price: 40 }
+                ]
+            },
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Limonada", price: 60, note: "Litro" },
+                    { name: "Limonada", price: 100, note: "Con Topping" },
+                    { name: "Limonada", price: 40, note: "Chica" },
+                    { name: "Limonada", price: 60, note: "Chica con Topping" },
+                    { name: "Chamoyada (sin alcohol)", price: 45, note: "Chica" },
+                    { name: "Chamoyada (sin alcohol)", price: 70, note: "Chica con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "frappes",
+        title: "Frappes",
+        description: "Leche entera por default. Cambio a leche deslactosada / coco / almendra: +$15",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Galleta Oreo, Moka, Capuchino Original, Chocomenta, Hot Cocoa, Mazapán, Taro, Matcha", price: 95, note: "Chica" },
+                    { name: "", price: 125, note: "Chica con Topping" },
+                    { name: "", price: 110, note: "Grande" },
+                    { name: "", price: 145, note: "Grande con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "legos",
+        title: "LEGOs",
+        description: "",
+        items: [
+            {
+                subtitle: "",
+                description: "",
+                options: [
+                    { name: "Azul, Rojo, Verde, Amarillo, combinaciones", price: 85, note: "Chica" },
+                    { name: "", price: 120, note: "Chica con Topping" },
+                    { name: "", price: 110, note: "Grande" },
+                    { name: "", price: 150, note: "Grande con Topping" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "topping",
+        title: "Topping (Elije 5)",
+        description: "Elige 5 toppings para tu bebida",
+        items: [
+            {
+                subtitle: "Fruta",
+                options: [
+                    { name: "Mango", id: 1 },
+                    { name: "Pepino", id: 2 },
+                    { name: "Jicama", id: 3 }
+                ]
+            },
+            {
+                subtitle: "Cacahuates",
+                options: [
+                    { name: "Tipo hot nuts", id: 4 },
+                    { name: "Japones", id: 5 },
+                    { name: "Ajo y chile", id: 6 },
+                    { name: "Español", id: 7 },
+                    { name: "Habanero", id: 8 },
+                    { name: "Salado", id: 9 },
+                    { name: "Enchilado", id: 10 },
+                    { name: "Haba", id: 11 },
+                    { name: "Garbanzo enchilado", id: 12 }
+                ]
+            },
+            {
+                subtitle: "Papas",
+                options: [
+                    { name: "Churrumais", id: 14 },
+                    { name: "Cheetos", id: 16 },
+                    { name: "Doritos", id: 17 },
+                    { name: "Ruffles", id: 18 },
+                    { name: "Rancheritos", id: 19 },
+                    { name: "Sabritas", id: 20 },
+                    { name: "Tostachos", id: 21 },
+                    { name: "Tipo Taki", id: 22 },
+                    { name: "Churritos de ajonjoli", id: 23 },
+                    { name: "Cheetos Flamin Hot", id: 49 }
+                ]
+            },
+            {
+                subtitle: "Gomitas y Dulces",
+                options: [
+                    { name: "Bolitas de tamarindo", id: 24 },
+                    { name: "Banderilla", id: 25 },
+                    { name: "Tarugo", id: 26 },
+                    { name: "Skwinkles Salsagheti", id: 27 },
+                    { name: "Paleta de goma sandia", id: 28 },
+                    { name: "Manguitos", id: 29 },
+                    { name: "Pelon", id: 30 },
+                    { name: "Pulparindo", id: 31 },
+                    { name: "Lombriz enchilada", id: 32 },
+                    { name: "Tamborcitos", id: 33 },
+                    { name: "Rockaleta", id: 34 },
+                    { name: "Picafresa", id: 35 },
+                    { name: "Gomifruta enchilada", id: 36 },
+                    { name: "Gomitas mini tajin", id: 37 },
+                    { name: "Skwinkles Clasico", id: 38 },
+                    { name: "Raqueta", id: 39 },
+                    { name: "Ricaleta", id: 40 },
+                    { name: "Lombriz dulce", id: 41 },
+                    { name: "Tira Xtremes", id: 42 },
+                    { name: "Bolitas aciditas de cereza", id: 43 },
+                    { name: "Pandita", id: 44 }
+                ]
+            },
+            {
+                subtitle: "Carnes Frias",
+                options: [
+                    { name: "Camaron", id: 46 },
+                    { name: "Cueritos", id: 47 },
+                    { name: "Aceitunas", id: 51 }
+                ]
+            }
+        ]
+    }
+];
+
+// Make it available globally
+window.menuData = menuData;
+
+console.log('%c✅ Menu data loaded successfully! Total categories: ' + menuData.length, 'color: #e67e22; font-weight: bold;');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// js/modal-populate.js
+
+function createMenuHTML(category) {
+    let html = `<h1 class="modal-title">${category.title}</h1>`;
+    
+    if (category.description) {
+        html += `<p class="modal-desc">${category.description}</p>`;
+    }
+
+    category.items.forEach(item => {
+        html += `<div class="menu-section">`;
+        
+        if (item.subtitle) {
+            html += `<h3 class="section-title">${item.subtitle.replace(/_/g, ' ')}</h3>`;
+        }
+        
+        if (item.description) {
+            html += `<p class="section-desc">${item.description}</p>`;
+        }
+
+        if (item.options && item.options.length > 0) {
+            html += `<div class="price-list">`;
+            
+            item.options.forEach(opt => {
+                const priceText = opt.price ? `$${opt.price}` : '';
+                html += `
+                    <div class="price-row">
+                        <span class="option-name">${opt.name}</span>
+                        <span class="price">${priceText}</span>
+                    </div>
+                `;
+            });
+            
+            html += `</div>`;
+        }
+        
+        html += `</div>`;
+    });
+
+    return html;
+}
+
+// Function to open modal with specific category
+function openMenuModal(categoryId) {
+    const category = window.menuData.find(cat => cat.id === categoryId);
+    
+    if (!category) {
+        console.error(`Category ${categoryId} not found`);
+        return;
+    }
+
+    const modalArea = document.getElementById('modal-area');
+    modalArea.innerHTML = createMenuHTML(category);
+
+    // Show modal (assuming you already have modal logic)
+    document.getElementById('modal').style.display = 'flex';
+}
+
+// Attach click listeners to all buttons
+function initMenuButtons() {
+    const buttons = {
+        'p01aguachiles': 'aguachiles',
+        'p02ceviches': 'ceviches',
+        'p03botaneando': 'botaneando',
+        'p04hamburguesas': 'hamburguesas',
+        'p05jochos': 'jochos',
+        'p06gonzalitas': 'gonzalitas',
+        'p09chamoyadas': 'chamoyadas',
+        'p10cerveza': 'cerveza',
+        'p11mojitos': 'mojitos',
+        'p12pinacoladafrappe': 'pinacoladafrappe', 
+        'p13cuba': 'cuba',
+        'p14whisky': 'whisky',
+        'p15mentirosa': 'mentirosa',
+        'p16jacaranda': 'jacaranda',
+        'p17diablito': 'diablito',
+        'p18bluelove': 'bluelove',
+        'p19bicolor': 'bicolor',
+        'p20cielorosa': 'cielorosa',
+        'p21consentida': 'consentida',
+        'p22margaritasfrappe': 'margaritasfrappe',
+        'p23paloma': 'paloma',
+        'p24frappevino': 'frappevino',
+        'p25tintodeverano': 'tintodeverano',
+        'p26copadevino': 'copadevino',
+        'p27caribenas': 'caribenas',
+        'p28sirena': 'sirena',
+        'p29mezcal': 'mezcal',
+        'p30carajillos': 'carajillos',
+        'p31cubetas': 'cubetas',
+        'p32tablas': 'tablas',
+        'p33varios': 'varios',
+        'p34frappes': 'frappes',
+        'p35legos': 'legos',
+        'p36topping': 'topping'
+        // Add the rest
+    };
+
+    Object.keys(buttons).forEach(btnId => {
+        const btn = document.getElementById(btnId);
+        if (btn) {
+            btn.addEventListener('click', () => {
+                openMenuModal(buttons[btnId]);
+            });
+        }
+    });
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initMenuButtons);
+
+
+
+
+
+
+
+
+
 
 
 
@@ -259,7 +1229,7 @@ modalButtons.forEach(button => {
 
 
 
-
+/*
 const chamoyadas = {
     'product':'chamoyadas',
     'description':'Pulpa natural, azúcar, con chamoy',
@@ -310,17 +1280,17 @@ const cerveza = {
 
 
 
+/*
 
 
 
-/* Products encompasing Array */
 const products_iterable = Array(
     chamoyadas,
     cerveza
 );
 
 
-/* Products Title over red frame and Description */
+
 products_iterable.forEach(product => {
     //
     //const html_title     = document.getElementById(`title_${product.product}`);
@@ -336,18 +1306,18 @@ products_iterable.forEach(product => {
     html_description.className = 'product-description';
     html_description.innerText = product.description;
     //
-    
+
     //
-    /*
+
     html_title.innerText = product.product;
     const html_description     = document.getElementById(`description_${product.product}`);
     html_description.innerText = product.description;
-    */
+
 });
 
 
 
-
+*/
 
 
 
