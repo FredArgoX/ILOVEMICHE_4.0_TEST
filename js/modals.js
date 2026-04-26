@@ -1236,6 +1236,16 @@ function openMenuModal(categoryId) {
     const modalArea = document.getElementById('modal-area');
     modalArea.innerHTML = createMenuHTML(category);
 
+    // ---------------------------------------------------------------------
+    if (swiper && swiper.mousewheel) {
+        wasSwiperEnabled = swiper.mousewheel.enabled;
+        swiper.mousewheel.disable();
+    }
+
+    // Optional: also disable touch swiping on the swiper while modal is open
+    swiper.allowTouchMove = false;
+    // ---------------------------------------------------------------------
+
     // Show modal (assuming you already have modal logic)
     document.getElementById('modal').style.display = 'flex';
 }
