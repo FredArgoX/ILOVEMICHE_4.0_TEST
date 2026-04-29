@@ -154,6 +154,7 @@ const menuData = [
     {
         id: "aguachiles",
         title: "Aguachiles",
+        image: "https://thumbs.dreamstime.com/b/angel-big-wings-flies-over-city-ai-generated-angel-big-wings-flies-over-city-ai-generated-283867040.jpg",
         description: "Camaron fresco preparado con nuestras salsas especiales",
         items: [
             {
@@ -1186,6 +1187,11 @@ console.log('%c✅ Menu data loaded successfully! Total categories: ' + menuData
 
 function createMenuHTML(category) {
     let html = `<h1 class="modal-title">${category.title}</h1>`;
+
+    // Image injection
+    if (category.image) {
+        html += `<img src="${category.image}" alt="" class="product-image"></img>`;
+    }
     
     if (category.description) {
         html += `<p class="modal-desc">${category.description}</p>`;

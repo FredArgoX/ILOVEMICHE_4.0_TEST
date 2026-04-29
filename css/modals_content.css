@@ -101,3 +101,12 @@
 
     font-weight: 500;
 }
+
+
+
+.product-image {
+    border: 1px solid crimson;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
