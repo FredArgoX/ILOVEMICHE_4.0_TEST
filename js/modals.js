@@ -217,6 +217,7 @@ const menuData = [
     {
         id: "ceviches",
         title: "Ceviches",
+        image: "",
         description: "",
         items: [
             {
@@ -249,6 +250,7 @@ const menuData = [
     {
         id: "botaneando",
         title: "Botaneando",
+        image: "",
         description: "",
         items: [
             {
@@ -275,6 +277,7 @@ const menuData = [
     {
         id: "hamburguesas",
         title: "Hamburguesas",
+        image: "",
         description: "Toda hamburguesa contiene: Pan / Mayonesa / Jamón / Queso amarillo / Jitomate / Cebolla / Lechuga / Orden de papas",
         items: [
             {
@@ -297,6 +300,7 @@ const menuData = [
     {
         id: "jochos",
         title: "Jochos",
+        image: "",
         description: "",
         items: [
             {
@@ -324,6 +328,7 @@ const menuData = [
     {
         id: "gonzalitas",
         title: "Gonzalitas",
+        image: "",
         description: "",
         items: [
             {
@@ -427,6 +432,7 @@ const menuData = [
     {
         id: "chamoyadas",
         title: "Chamoyadas",
+        image: "",
         description: "Pulpa natural, azúcar, con chamoy",
         items: [
             {
@@ -468,6 +474,7 @@ const menuData = [
     {
         id: "cerveza",
         title: "Cerveza",
+        image: "",
         description: "",
         items: [
             {
@@ -513,6 +520,7 @@ const menuData = [
     {
         id: "mojitos",
         title: "Mojitos",
+        image: "",
         description: "Hierbabuena, limon, azucar, pulpa, Licor Ron Bacardi",
         items: [
             {
@@ -554,6 +562,7 @@ const menuData = [
     {
         id: "pinacoladafrappe",
         title: "Piña Colada Frappe",
+        image: "",
         description: "Jugo de piña, crema de coco, azucar, Licor Ron Bacardi",
         items: [
             {
@@ -569,6 +578,7 @@ const menuData = [
     {
         id: "cuba",
         title: "Cuba",
+        image: "",
         description: "Ron Bacardi, agua mineral, coca, toque de limon",
         items: [
             {
@@ -586,6 +596,7 @@ const menuData = [
     {
         id: "whisky",
         title: "Whisky",
+        image: "",
         description: "Acompañado con agua mineral y manzanita",
         items: [
             {
@@ -605,6 +616,7 @@ const menuData = [
     {
         id: "mentirosa",
         title: "Mentirosa",
+        image: "",
         description: "Vodka, manzana verde, refresco de lima, perlas explosivas de manzana verde",
         items: [
             {
@@ -620,6 +632,7 @@ const menuData = [
     {
         id: "jacaranda",
         title: "Jacaranda",
+        image: "",
         description: "Vodka Smirnoff, infusion floral, endulzante, agua mineral, limon. Cambia de color",
         items: [
             {
@@ -635,6 +648,7 @@ const menuData = [
     {
         id: "diablito",
         title: "Diablito",
+        image: "",
         description: "Vodka Smirnoff tamarindo, refresco de lima, refresco de toronja, pulpa de tamarindo",
         items: [
             {
@@ -650,6 +664,7 @@ const menuData = [
     {
         id: "bluelove",
         title: "Blue Love",
+        image: "",
         description: "Vodka Smirnoff, bebida energetica, refresco de lima",
         items: [
             {
@@ -665,6 +680,7 @@ const menuData = [
     {
         id: "bicolor",
         title: "Bicolor",
+        image: "",
         description: "Vodka Smirnoff, bebida energetica, jugo de arandano, refresco de lima",
         items: [
             {
@@ -680,6 +696,7 @@ const menuData = [
     {
         id: "cielorosa",
         title: "Cielo Rosa",
+        image: "",
         description: "Vodka Smirnoff, Algodon de azucar, refresco de lima",
         items: [
             {
@@ -695,6 +712,7 @@ const menuData = [
     {
         id: "consentida",
         title: "Consentida",
+        image: "",
         description: "Vodka, Limón, Jugo de sandía arizona, Refresco de lima",
         items: [
             {
@@ -710,6 +728,7 @@ const menuData = [
     {
         id: "margaritasfrappe",
         title: "Margaritas Frappe",
+        image: "",
         description: "Tequila Jose Cuervo Especial o Mezcal Moskalti, Licor Controy, Limon, azucar y pulpa natural",
         items: [
             {
@@ -736,6 +755,7 @@ const menuData = [
     {
         id: "paloma",
         title: "Paloma",
+        image: "",
         description: "Tequila Jose Cuervo Especial o Mezcal Moskalti, limon, sal, refresco de toronja",
         items: [
             {
@@ -759,6 +779,7 @@ const menuData = [
     {
         id: "frappevino",
         title: "Frappe Vino",
+        image: "",
         description: "Vino tinto, jugo de arandano, azucar, toque de limon",
         items: [
             {
@@ -774,6 +795,7 @@ const menuData = [
     {
         id: "tintodeverano",
         title: "Tinto de Verano",
+        image: "",
         description: "Limón, endulzante, vino, refresco de lima",
         items: [
             {
@@ -789,6 +811,7 @@ const menuData = [
     {
         id: "copadevino",
         title: "Copa de Vino",
+        image: "",
         description: "",
         items: [
             {
@@ -801,6 +824,7 @@ const menuData = [
     {
         id: "caribenas",
         title: "Caribeñas",
+        image: "",
         description: "Pulpa de chamoy, limon, salsas, sal",
         items: [
             {
@@ -821,6 +845,7 @@ const menuData = [
     {
         id: "sirena",
         title: "Sirena",
+        image: "",
         description: "Mezcal Tobala, Concentrado de Jamaica, Limon",
         items: [
             {
@@ -836,6 +861,7 @@ const menuData = [
     {
         id: "mezcal",
         title: "Mezcal",
+        image: "",
         description: "",
         items: [
             {
@@ -883,6 +909,7 @@ const menuData = [
     {
         id: "carajillos",
         title: "Carajillos",
+        image: "",
         description: "Cafe expresso, Licor 43",
         items: [
             {
@@ -900,6 +927,7 @@ const menuData = [
     {
         id: "cubetas",
         title: "Cubetas",
+        image: "",
         description: "",
         items: [
             {
@@ -949,6 +977,7 @@ const menuData = [
     {
         id: "tablas",
         title: "Tablas",
+        image: "",
         description: "",
         items: [
             {
@@ -966,6 +995,7 @@ const menuData = [
     {
         id: "varios",
         title: "Varios",
+        image: "",
         description: "",
         items: [
             {
@@ -1006,6 +1036,7 @@ const menuData = [
     {
         id: "frappes",
         title: "Frappes",
+        image: "",
         description: "Leche entera por default. Cambio a leche deslactosada / coco / almendra: +$15",
         items: [
             {
@@ -1066,6 +1097,7 @@ const menuData = [
     {
         id: "legos",
         title: "LEGOs",
+        image: "",
         description: "",
         items: [
             {
@@ -1092,6 +1124,7 @@ const menuData = [
     {
         id: "topping",
         title: "Topping (Elije 5)",
+        image: "",
         description: "Elige 5 toppings para tu bebida",
         items: [
             {
