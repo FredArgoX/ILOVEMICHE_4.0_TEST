@@ -112,6 +112,21 @@ BTN_p36topping.addEventListener('click', openModal);
 
 // Close modal
 const closeModal = () => {
+
+    // ---------------------------------------------------------------------
+    // ---------------------------------------------------------------------
+    // ---------------------------------------------------------------------
+    // Re-enable mousewheel scrolling
+    if (swiper && swiper.mousewheel) {
+        swiper.mousewheel.enable();
+    }
+
+    // Re-enable touch swiping/dragging
+    swiper.allowTouchMove = true;
+    // ---------------------------------------------------------------------
+    // ---------------------------------------------------------------------
+    // ---------------------------------------------------------------------
+
     contentX.style.opacity = 1.0;
     navBullets.style.opacity = 1.0;
     modalArea.scrollTop = 0;

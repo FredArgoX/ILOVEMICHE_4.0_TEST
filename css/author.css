@@ -1,0 +1,188 @@
+.svg_container{
+    height: min-content;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+svg{
+    width: auto;
+    height: auto;
+}
+
+
+#s02{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FARGOX {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Set variables and initial dash properties for strokes */
+.diagonal-dark1 {
+    --length: 450;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: var(--length);
+    animation: drawForward 12s infinite alternate, wildStroke 30s infinite;
+}
+
+.diagonal-dark2 {
+    --length: 450;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: var(--length);
+    animation: drawForward 12s infinite alternate, wildStroke 30s infinite;
+}
+
+.vertical-white1 {
+    --length: 225;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: var(--length);
+    animation: drawForward 12s infinite alternate, wildStroke 12s infinite;
+}
+
+.vertical-white2 {
+    --length: 225;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: var(--length);
+    animation: drawForward 12s infinite alternate, wildStroke 12s infinite;
+}
+
+.short-white1 {
+    --length: 113;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: var(--length);
+    animation: drawForward 12s infinite alternate, wildStroke 12s infinite;
+}
+
+.short-white2 {
+    --length: 113;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: var(--length);
+    animation: drawForward 12s infinite alternate, wildStroke 12s infinite;
+}
+
+.long-white1 {
+    --length: 271;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: 0;
+    animation: drawForward 12s infinite alternate, wildStroke 12s infinite;
+}
+
+.long-white2 {
+    --length: 271;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: 0;
+    animation: drawForward 12s infinite alternate, wildStroke 12s infinite;
+}
+
+.mid-white1 {
+    --length: 56;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: var(--length);
+    animation: drawForward 12s infinite alternate, wildStroke 12s infinite;
+}
+
+.mid-white2 {
+    --length: 56;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: var(--length);
+    animation: drawForward 12s infinite alternate, wildStroke 12s infinite;
+}
+
+.side-white1 {
+    --length: 56;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: 0;
+    animation: drawForward 12s infinite alternate, wildStroke 12s infinite;
+}
+
+.side-white2 {
+    --length: 56;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: 0;
+    animation: drawForward 12s infinite alternate, wildStroke 12s infinite;
+}
+
+.bg-hex {
+    transform-origin: 300px 300px;
+    fill: #000000;
+    /*animation: wildFill 60s infinite;/*, wildStroke 3s infinite;/*rotateWild 0.3s infinite linear;*/
+}
+
+/* Keyframes for drawing with more time spent in complete state */
+@keyframes drawForward {
+    0% { stroke-dashoffset: var(--length); }
+    10% { stroke-dashoffset: 0; }
+    90% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: var(--length); }
+}
+
+@keyframes drawReverse {
+    0% { stroke-dashoffset: 0; }
+    80% { stroke-dashoffset: 0; }
+    90% { stroke-dashoffset: var(--length); }
+    100% { stroke-dashoffset: var(--length); }
+}
+
+/* Greyscale color change for strokes, inverted for contrast */
+@keyframes wildStroke {
+    0% { stroke: #ffffff; }
+    25% { stroke: #666666; }
+    50% { stroke: #333333; }
+    75% { stroke: #000000; }
+    100% { stroke: #ffffff;}
+}
+
+/* Greyscale color change for fill */
+@keyframes wildFill {
+    0% { fill: #191919; }
+    20% { fill: #333333; }
+    40% { fill: #666666; }
+    60% { fill: #999999; }
+    80% { fill: #cccccc; }
+    90% { fill: #eeeeee; }
+    100% { fill: #191919; }
+}
+
+/* Updated rotate wild */
+@keyframes rotateWild {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#author{
+    color: #505050;
+    font-weight: 600;
+    padding: 15px;
+    backdrop-filter: blur(2px);
+}
+
+.social-container{
+    cursor: pointer;
+}
